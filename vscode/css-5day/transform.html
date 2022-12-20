@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<!-- head -->
+<head>
+   <meta charset='UTF-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <meta name='author' content='din'>
+   <meta name='date' content='2022.'>
+   <link rel='shortcut icon' href='../icon/favicon (4).ico'>
+   <title>Transform</title>
+   <style>
+    div {
+       width: 50px; 
+       height: 50px;
+       border: 1px solid;
+       background-color: olivedrab;
+       margin-left: 50px;
+       transition: transform 1s;
+    }
+    .b1:hover {
+        /* transform: translate(20px, 10px); */
+        transform: translateX(-20px);
+    }
+    .b2 {
+        border-radius: 5px;
+        padding: 10ox;
+    }
+    .b2:hover{
+        transform: rotate(-120000deg);
+    }
+
+    .b3:hover {
+        /* transform: scale(2, 2); */
+        transform: scaleX(30);
+    }
+
+    .b4:hover {
+        /* transform: skew(120deg, 120deg); */
+        transform: skewX(120deg);
+    }
+
+    .b5:hover {
+        width: 100px;
+
+    }
+   </style>
+</head>
+
+<!-- body -->
+<body>
+    <h3>위치 변환(translateX)</h3>
+    <div class="b1">이동한다~</div>
+
+    <h3>각도 변환(rotate)</h3>
+    <div class="b2">1</div>
+
+    <h3>각도 변환(scaleX)</h3>
+    <div class="b3">확대에에</div>
+
+    <h3>기울기 변환(skewX)</h3>
+    <div class="b4">돌아간다~</div>
+
+    <h3>크기변환 2</h3>
+    <div class="b5">늘어난다~</div>
+</body>
+
+<!-- script -->
+<script>
+
+</script>
+</html>
