@@ -1,0 +1,11 @@
+파일 > 폴더열기 > CSS-6day
+summary.txt 생성
+
+슬라이더 만들기
+  input 태그 radio type
+  ul 태그
+  label 태그
+
+  bxSlider, bootstrap 등을 활용하는 것이 좋다!
+
+전체 페이지 스타일링(icia 커피샵)
