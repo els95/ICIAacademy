@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>논리연산자</title>
+</head>
+<body>
+    
+</body>
+<script>
+   var result;
+    // and 연산자
+   result = true && true; //true
+   console.log("true && true : " + result);
+
+   result = false && true; //false
+   console.log("true && true : " + result);
+
+   result = true && false; //false
+   console.log("true && false : " + result);
+
+   result = false && false; //false
+   console.log("true && false : " + result);
+
+   result = (5>3) && (3<2); //false
+   console.log("(5>3) && (3<2) : " + result);
+
+    // or 연산자
+   result = true || true; //true
+   console.log("true || true : " + result);
+
+   result = false || true; //true
+   console.log("true || true : " + result);
+
+   result = true || false; //true
+   console.log("true || false : " + result);
+
+   result = (5>3) || (3<2); //true
+   console.log("(5>3) || (3<2) : " + result);
+    
+   //not 연산자
+   result = !true;
+   console.log("!true : " + result);
+
+   result = !false;
+   console.log("!false : " + result);
+
+   result = !!false;
+   console.log("!!false : " + result);
+</script>
+</html>
