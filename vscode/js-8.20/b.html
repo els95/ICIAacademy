@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<!-- head -->
+<head>
+   <meta charset='UTF-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <meta name='author' content='din'>
+   <meta name='date' content='2022.'>
+   <link rel='shortcut icon' href='../icon/favicon (4).ico'>
+   <title>ATM기 만들기</title>
+   <style>
+    fieldset {
+        width: 300px;
+        height: 300px;
+        text-align: center;
+    }
+
+    .img {
+        width: 80px;
+    }
+   </style>
+</head>
+
+<!-- body -->
+<body>
+    <fieldset>
+        <legend><img src="image/bank.png" width="50px"></legend>
+        <input type="text" id="txt" placeholder="금액을 입력하세요." ><br><br>
+        <img src="image/dep.png" class="img" onclick="deposit()"
+            input type="botton" value="입금">
+        <img src="image/with.png"class="img" onclick="withdraw()"
+            input type ="botton" value="출금">
+        <img src="image/amount.png" class="img" onclick="msg()" onmouseover="clean()"
+            input type ="button" value="잔액">
+        <h3 id="result"></h3>
+    </fieldset>
+</body>
+    
+<!-- script -->
+<script>
+    var balance = 0;
+
+    function clean(){
+        document.getElementById("result").innerHTML="";
+    }
+
+    function deposit(){
+        var dep =  document.getElementById("txt");
+        dep1 = parseInt(dep.value);
+
+        console.log(dep);
+
+        if(dep.value==""){
+            document.getElementById("result").innerHTML = "다시 입력해주세요";
+        }else {
+            balance += dep1
+            document.getElementById("result").innerHTML = 
+            "총 " + dep1+ "원 입금되었습니다."
+        }
+    }
+
+    function withdraw(){
+        var wit = document.getElementById("txt");
+        var wit1 = parseInt(wit.value);
+
+        console.log(wit);
+     
+        if(wit.value==""){
+            document.getElementById("result").innerHTML = "다시 입력해주세요";
+        } else{    
+            if(wit1<=balance){
+                balance -= wit1;
+                document.getElementById("result").innerHTML=
+                "총" + wit1 + "원 출금되었습니다.";
+            }else{
+                alert((balance-wit1) + "원 부족합니다.");
+            }
+        }
+    }
+
+    function msg(){
+        var msg = document.getElementById("txt");
+        var msg1 = parseInt(msg.value);
+
+        alert("잔액은 " + (balance) + "원입니다.");
+    }
+</script>
+</html>
