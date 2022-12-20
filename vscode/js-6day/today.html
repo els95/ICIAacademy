@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<!-- head -->
+<head>
+   <meta charset='UTF-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <meta name='author' content='din'>
+   <meta name='date' content='2022.'>
+   <link rel='shortcut icon' href='../icon/favicon (4).ico'>
+   <title>today1</title>
+</head>
+
+<!-- body -->
+<body>
+<!-- 버튼을 클릭했을 때 today1()함수가 실행되도록 작성-->
+    <button onclick="today1()" >today1</button>
+    <button onclick="time1()">time1</button>
+    <h1 id="result"></h1>
+</body>
+
+<!-- script -->
+<script>
+    function today1(){
+       var today = new Date();
+    //  document.getElementById("result").innerHTML = today;
+    //  년(year)
+       var yy =  today.getFullYear();
+
+    //  월(month)
+        var mm = today.getMonth() + 1 ; //유일하게 +1 해줘야함
+
+    //  일(day)
+        var dd = today.getDate(); 
+
+    //  요일(days)
+        var day = today.getDay();
+        //var days = ["일","월","화","수","목","금","토"];
+
+
+        document.getElementById("result").innerHTML =
+        yy + "년" + mi + "월" + dd + "일" +day + "요일";
+    }
+
+    function time1(){
+        var time = new Date();
+        var hh = time.getHours();
+        var mi = time.getMinutes();
+        var ss = time.getSeconds();
+
+        hh = checkTime(hh);
+        mi = checkTime(mi);
+        ss = checkTime(ss);
+        
+        document.getElementById("result").innerHTML=
+        hh + "시 " + mi + "분 " + ss + "초";
+        setTimeout(time1, 500);
+    }
+
+    function checkTime(i){
+        if(i<10){
+            i = "0" + i;
+        }
+        return i;
+    }
+
+    // setInterval(time1, 1000);
+   
+</script>
+</html>

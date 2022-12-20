@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<!-- head -->
+<head>
+   <meta charset='UTF-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <meta name='author' content='din'>
+   <meta name='date' content='2022.08.22'>
+   <link rel='shortcut icon' href='../icon/favicon (4).ico'>
+   <title>팝업창</title>
+</head>
+
+<!-- body -->
+<body>
+    <button onclick="popup()">알림창</button>
+    <button onclick="conf()">확인창</button>
+    <button onclick="promp()">입력창</button>
+</body>
+
+<!-- script -->
+<script>
+    //알림창 함수
+    function popup(){
+        alert('경고 or 알림');
+    }
+
+    //확인창 함수
+    function conf(){
+        var con = confirm('정말 삭제하시겠습니까?'); // 확인, 취소 버튼이 있음
+        // 확인 버튼을 누르면 con에 true 가 저장
+        // 취소 버튼을 누르면 con에 false가 저장
+        if(con){
+            alert('삭제가 완료됐습니다.');
+        } else {
+            alert('취소됐습니다.');
+        }
+    }
+
+    //입력창 함수
+    function promp(){
+        var stuName = prompt('당신의 이름은?');
+        
+        //alert('당신의 이름은 ' + stuName + "입니다.");
+        if(stuName=="" || stuName==" "){
+            alert('이름을 다시 입력해주세요');
+            promp();
+        }else if(stuName==null){
+            alert('취소');
+        } else {
+            alert(stuName + "님 반갑습니다.");
+        }
+    }
+   
+
+</script>
+</html>
