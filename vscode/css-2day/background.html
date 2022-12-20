@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>배경처리</title>
+    <style>
+        body {
+            background-image: url("circle.png");
+           /* background-color: aliceblue;
+            background-repeat: repeat-x;
+            background-size: cover;*/
+            height: 1500px;
+            background-attachment: scroll;
+        }
+        div#d1 {
+            margin: 20px;
+            height: 500px;
+            background-image: url("로고.png");
+            background-repeat: no-repeat;
+            color: saddlebrown;
+            background-size: cover;
+            background-size: 300px;
+            border: 1px solid;
+            background-position: right bottom;
+        }
+        #d2 {
+            width: 500px;
+            height: 400px;
+            border: 1px solid tomato;
+            background: url("로고.png") 
+                        no-repeat 
+                        top right;
+            background-size: 100px;
+        }
+    </style>
+</head>
+<body>
+   <div id="d1">여기에 이미지가 출력됩니다.</div>
+   <div id="d2">두번째 공간</div>
+</body>
+</html>

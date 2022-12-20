@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>네이버:회원가입</title>
+        <style>
+            body {
+                background-color: whitesmoke;
+            }
+            .mainBox {
+                margin: auto;
+                width: 450px;
+            }
+            /*
+            .inputbox {
+                width: 100%;
+                height: 40px;
+                border: 0.5px solid gainsboro;
+                cursor: pointer;
+            } */
+            .logo {
+                display: block;
+                text-align: center;
+                margin-top: -30px;
+                margin-bottom: -70px;
+            }
+            .text_box {
+                margin-top: -20px;
+                width: 100%; 
+                height: 50px;
+                border: 1px solid gainsboro;
+            }
+            .text_box:focus {
+                border: 1px solid yellowgreen;
+            }
+            .b_text_box {
+                display: flex;
+                justify-content: space-between;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="logo">
+            <img src="로고.png" width="200px">
+        </div>
+        <div class="mainBox">
+            <form>
+                <h3><label for="naver_id">아이디</label></h3>
+                <span style="position: relative;"><input class="text_box" id="naver_id" type="text"><span style="position: absolute; top: 0px; right: 15px; color: grey;">@naver.com</span></span>
+                <h3><label for="naver_password">비밀번호</label></h3>
+                <input class="text_box" id="naver_password" type="password">
+                <h3><label for="naver_check_password">비밀번호 재확인</label></h3>
+                <input class="text_box" id="naver_check_password" type="password"><br>
+                <div style="width: 100%;">
+                    <h3><label for="">이름</label></h3>
+                    <input class="text_box" type="text"><br>
+                    <h3><label for="">생년월일</label></h3><br>
+                    <div class="text_box b_text_box" style="width: 455px; border: none;">
+                        <input style="width: 100%; border: 1px solid gainsboro;" type="text" maxlength="4" placeholder="년(4자)">
+                        <select style="width: 100%; border: 1px solid gainsboro; margin-left: 15px;">
+                            <option value="월">월</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <input class="day" style="width: 100%; margin-left: 15px; border: 1px solid gainsboro;" type="text" placeholder="일" maxlength="2"><br>
+                        <!-- <p>태어난 년도 4자리를 정확하게 입력하세요</p> -->
+                    </div>
+                        <h3><label for="">성별</label></h3>
+                        <select style="width: 455px;" class="text_box" >
+                            <option value="성별">성별</option>
+                            <option value="남자">남자</option>
+                            <option value="여자">여자</option>
+                            <option value="선택안함">선택안함</option>
+                        </select>
+                        <h3><label for="email">본인 확인 이메일<small style="color: gray;">(선택)</small></label></h3>
+                        <input class="text_box" type="email" name="email" placeholder="선택입력">
+                    
+                    <h3><label for="">휴대전화</label></h3>
+                    <div>
+                        <select style="width: 455px; margin-bottom: 10px;" class="text_box">
+                            <option value="대한민국 +82">대한민국 +82</option>
+                            <option value="대한민국 +82">대한민국 +82</option>
+                            <option value="대한민국 +82">대한민국 +82</option>
+                            <option value="대한민국 +82">대한민국 +82</option>
+                            <option value="대한민국 +82">대한민국 +82</option>
+                            <option value="대한민국 +82">대한민국 +82</option>
+                            <option value="대한민국 +82">대한민국 +82</option>
+                            <option value="대한민국 +82">대한민국 +82</option>
+                        </select><br><br>
+                        <div class="text_box" style="border: none; display: flex; width: 455px; justify-content: space-between;">
+                            <input style="width: 75%; border: 1px solid gainsboro;" type="tel" pattern="\d{2,3}-\d{3,4}-\d{4}" placeholder="전화번호 입력">
+                            <input style="margin-left: 20px; width: 25%; border: 1px solid gainsboro; font-size: 15px; background-color: #03c75a; color: white;" type="button" value="인증번호 받기"><br>
+                        </div>
+                        <div class="text_box" style="display: flex; border: none; width: 455px; margin-top: 15px;">
+                            <input style="width: 100%;" type="text" placeholder="인증번호 입력하세요" disabled><br><br>
+                        </div>
+                    </div>
+                    <div style="width: 455px;">
+                        <input class="text_box" style="margin-top: 35px; background-color: #03c75a; color: white; font-size: 20px;" type="submit" value="가입하기">
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </body>
+</html>
