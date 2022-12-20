@@ -1,0 +1,402 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gong-Cha</title>
+    <!-- 여기에 CSS 링크-->
+    <link rel="shortcut icon" href="image/파비콘.ico">
+    <link type="text/css" rel="stylesheet" href="slider1.css" />
+    <link type="text/css" rel="stylesheet" href="style4.css" />
+    <style>
+        section {
+            margin-top: 50px;
+            width: 100%;
+        }
+        #font {
+            color: whitesmoke;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            margin-left: 15%;
+            font-size: large;
+            font-weight: bold;
+        }
+        #coupon > a{
+            color: whitesmoke;
+            margin-left: 15%;
+            font-size: large;
+            font-weight: bold;
+        }
+        #coupon {
+            background-color: rgb(37,37,37);
+            width: 100%;
+            height: 70px;
+            padding-top: 50px;
+        }
+        #cou_box {
+            background-color: rgb(37,37,37);
+            padding: 20px;
+            width: 70%;
+            height: 170px;
+            border-radius: 10px;
+        }
+        #coutxt{
+            width: 60%;
+            height:40px;
+            margin-left: 15%;
+            margin-top: 15px;
+            border-radius: 5px;
+            background-color: rgb(47,47,47);
+            border-style: none;
+            padding-left: 10px;
+            font-size: 13.5px;
+            font-weight: bold;
+            color: whitesmoke;
+        }
+        #notxt {
+            color: #ff27a3;
+            margin-left: 15%;
+            font-size: small;
+            margin-bottom: 10px;
+        }
+        #coutxt::placeholder {
+            color: gray;
+        }
+        /*  */
+        #cou_enable{
+            display:inline-block;
+            width: 50%;
+            margin-top: 10px;
+            margin-left: 15%;
+            margin-bottom: 30px;
+            color: whitesmoke;  
+            line-height: 25px;
+            display:none;
+            font-weight:bolder;
+            background-color: rgb(47,47,47);
+            border-radius:5px;
+            padding: 20px;
+        }
+        #cou_use{
+            background-color: #1351f9;
+            color: whitesmoke;
+            font-weight: bold;
+            font-size: small;
+            border-style: none;
+            width: 90px;
+            height: 35px;
+            border-radius: 20px;
+            cursor:pointer;
+            display:none;
+        }
+        /*  */
+        #list {
+            margin-top: 10px;
+            margin-left: 160px;
+            margin-right: 160px;
+            color: gray;  
+            line-height: 25px;
+        }
+        #ulle {
+            float: left;
+            width: 50%;
+            font-size: small;
+        }
+        #ulri {
+            float: left;
+            width: 50%;
+            font-size: small;
+        }
+
+        #coubt {
+            background-color: #1351f9;
+            color: whitesmoke;
+            font-weight: bold;
+            font-size: small;
+            border-style: none;
+            width: 90px;
+            height: 35px;
+            border-radius: 20px;
+            cursor:pointer;
+        }
+        section {
+            height: 700px;
+        }
+        footer {
+            width: 100%;
+            margin-left: 0px;
+        }
+    </style>
+</head>
+
+<body onscroll="cover2()">
+    <!-- TOP, DOWN -->
+    <div id="cover1">
+        <div id="top" onclick="top1()">▲</div>
+        <div id="down" onclick="down1()">▼</div>
+    </div>
+    <!-- 팝업창 -->
+    <div id="whole">
+    </div>
+    <div id="popup">
+        <div id="exit" onclick="exit1()">x</div>
+        <img id="popup_search" src="image/돋보기.png">
+        <input type="text" placeholder="검색어를 입력해 주세요.">
+        <img id="recent" src="image/팝업.png">
+        <h3>최근 검색내역이 없네요.<br>요즘 인기있는 검색어를 추천해드릴게요.</h3>
+        <div id="recom">
+            <a href="enter.html"><span>#GongChya ORIGINAL</span></a>
+            <a href="movie.html"><span>#GongChya 영화 업데이트</span></a>
+            <a href="drama.html"><span>#최초공개 #해외시리즈</span></a>
+            <a href="movie.html"><span>#해외시리즈 TOP</span></a>
+        </div>
+        <div>
+            <a href="drama.html"><span>#GongChya에서만 정주행</span></a>
+            <a href="movie.html"><span>#이 영화 찾으세요? #TV속 영화</span></a>
+        </div>
+    </div>
+    <header id="top2">
+        <div id="h_top">
+            <div id="h_top_wrap">
+                <nav class="t_nav">
+                    <ul>
+                        <a href="login-수정.html"
+                                style="text-decoration:none; color:white; font-size: 13px;">
+                                <li>로그인</li>
+                        </a>
+                        <a><li><div>이용권</div></li></a>
+                        <a href="coupon.html"><li>쿠폰ㆍ코인</li></a>
+                        <a><li>공챠온</li></a>
+                        <a href="event.html"><li>이벤트</li></a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="h_bottom">
+            <h1><a href="home.html"><img src="image/공챠.png" style="width:200px"></a></h1>
+            <nav class="m_nav">
+                <ul>
+                    <li>
+                        <h3><a href="home.html" style="text-decoration:none; color:white;">홈</a></h3>
+                    </li>
+                    <li>
+                        <h3 id="category">카테고리
+                            <div id="drop_down">
+                                <div id="drop_down_top">
+                    <li>
+                        <h5>전체 카테고리 보기</h5>
+                    </li>
+        </div>
+        <div id="recommand">
+            <li>
+                <h5>추천 메뉴</h5>
+            </li>
+        </div>
+        <div id="drop_down_bottom">
+            <a href="drama.html" style="text-decoration:none; color:gray;">
+                <li>드라마</li>
+            </a>
+            <a href="enter.html" style="text-decoration:none; color:gray;">
+                <li>예능</li>
+            </a>
+            <a href="movie.html" style="text-decoration:none; color:gray;">
+                <li>영화</li>
+            </a>
+            <a>
+                <li>영화플러스</li>
+            </a>
+            <a>
+                <li>해외시리즈</li>
+            </a>
+            <a>
+                <li>프로야구</li>
+            </a>
+            <a>
+                <li>ORIGINAL</li>
+            </a>
+            <a>
+                <li>CLASSIC</li>
+            </a>
+        </div>
+        </h3>
+        </li>
+        <li>
+            <h3>LIVE</h3>
+        </li>
+        <li>
+            <a href="login-수정.html"><h3>MY</h3></a>
+        </li><br>
+        <div id="button">
+            <input type="text" placeholder="검색하기" id="search">
+            <img src="image/돋보기.png" onclick="popup1()">
+        </div>
+        </div>
+        </ul>
+        </nav>
+        </div>
+    </header>
+    <section>
+       <div id="coupon">
+            <a>쿠폰내역</a>
+       </div>
+       <div id ="font">
+            <a>보유 쿠폰내역</a>
+       </div>
+       <div id="cou_box">
+        <input type="text" id="coutxt" placeholder="쿠폰번호를 입력해 주세요." onkeyup="keyEvent('up')">
+        <input type="button" id="coubt" value="쿠폰등록" onclick="on()"><br>
+        <span id="notxt"></span><br>
+        <span id="cou_enable"></span>
+        <input type="button" id="cou_use" value="쿠폰사용" onclick="use()">
+        <div id="list">
+            <ul id="ulle">
+                <li><span>&#8226; 등록하신 쿠폰은 환불되지 않습니다.</span></li>
+                <li><span>&#8226; 쿠폰은 상업적 용도로 사용하거나 매매하실 수 없습니다.</span></li>
+                <li><span>&#8226; 유효기간이 지난 쿠폰은 등록하실 수 없습니다.</span></li>
+            </ul>
+            <ul id="ulri">
+                <li><span>&#8226; 쿠폰으로 지급되는 상품은 기본 보유상품과 중복되어 적용되므로 가급적 
+                    이용중인 상품이 만료된 뒤에 쿠폰을 사용해 주세요.</span></li>
+                <li><span>&#8226; 쿠폰번호에 숫자 0,1은 없습니다. 영문자 O,I와 혼동하지 않도록 유의해 주세요.</span></li>
+            </ul>
+        </div>
+   </div>
+    </section>
+    <footer>
+        <div id="f_top">
+            <div id="f_top_wrap">
+                <nav class="f_nav">
+                    <ul>
+                        <li>회사소개</li>
+                        <li>개인정보취급방침</li>
+                        <li>서비스약관</li>
+                        <li>제휴문의</li>
+                        <li>이메일수집거부</li>
+                    </ul>
+                </nav>
+                <!-- <div class="f_site">패밀리사이트</div> -->
+            </div>
+        </div>
+        <div id="f_bottom">
+            <div id="f_bottom_wrap">
+                <h1><a href="home.html"><img src="image/공챠.png"></a></h1>
+                <!-- <address>주소</address>
+                    <p>카피라이트</p> -->
+            </div>
+            <div id="member">
+                <a><p>조원 :</p></a>
+                <a href="공정배/introduce-1.html"><p>공정배</p></a>
+                <a href="신동희/introduce.html"><p>신동희</p></a>
+                <a href="박지은/self.html"><p>박지은</p></a>
+                <a href="자기소개_진희.html"><p>김진희</p></a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    var pos1 = document.getElementById("pos1");
+    var pos2 = document.getElementById("pos2");
+    var pos3 = document.getElementById("pos3");
+    var pos4 = document.getElementById("pos4");
+    var pos = [pos1, pos2, pos3, pos4];
+    var i = 0;
+    var a = 5;
+    var b = 0;
+    setInterval(function () {
+        if (i == 4) {
+            i = 0;
+        }
+        pos[i].checked = true;
+        i++;
+    }, 3000);
+    function stop1() {
+        stop = document.getElementById("stop");
+        start = document.getElementById("start");
+        stop.style.display = "none";
+        start.style.display = "inline-block";
+        b = i;
+        i = a;
+    };
+    function start1() {
+        stop = document.getElementById("stop");
+        start = document.getElementById("start");
+        stop.style.display = "inline-block";
+        start.style.display = "none";
+        i = b;
+    }
+    function detail() {
+        location.href = "detail.html";
+    }
+    function popup1() {
+        popup = document.getElementById("popup");
+        whole = document.getElementById("whole");
+        whole.style.display = "block";
+        popup.style.display = "block";
+    }
+    function exit1() {
+        popup = document.getElementById("popup");
+        whole = document.getElementById("whole");
+        whole.style.display = "none";
+        popup.style.display = "none";
+    }
+    function cover2() {
+        var j = 1;
+        var cover1 = document.getElementById("cover1");
+        cover1.style.opacity = j;
+        clearInterval(fade);
+        var fade = setInterval(function () {
+            j--;
+            cover1.style.opacity = j;
+            clearInterval(fade);
+        }, 2000)
+    }
+    function top1() {
+        location.href = "#top2";
+    }
+    function down1() {
+        location.href = "#member";
+    }
+
+    function on(){
+        var bt = document.getElementById("coubt");
+        var txt = document.getElementById("coutxt").value;
+        var notxt = document.getElementById("notxt");
+        var cou_enable = document.getElementById("cou_enable");
+        var cou_box=document.getElementById("cou_box");
+       if(txt==""){
+        notxt.style.display="inline";
+        document.getElementById("notxt").innerHTML=
+        "쿠폰번호를 입력해주세요!"
+       } else if(txt=="공챠쿠폰"){
+        alert('정상등록되었습니다.');
+        cou_enable.style.display="inline-block";
+        cou_box.style.height=330+"px";
+        cou_use.style.display="inline-block";
+        notxt.style.display="none";
+        // location.href="home.html";
+    } else{
+        alert("등록되지 않은 쿠폰번호입니다.");
+        notxt.style.display="none";
+    }
+    }
+    function keyEvent(){
+        var txt1 = document.getElementById("coutxt");
+        var txt2 = document.getElementById("coutxt").value;
+        var notxt = document.getElementById("notxt");
+        var cou_enable = document.getElementById("cou_enable");
+        cou_enable.style.display="none";
+        cou_use.style.display="none";
+        if(txt2=="공챠쿠폰"){
+        cou_enable.innerHTML="등록된 쿠폰 :<br><br> "+ txt2+" - GONGCHYA 1일 무료체험 쿠폰(유효기간 2022-08-29~2023-08-29)";
+        }else{
+            cou_box.style.height=170+"px";
+        }
+    }
+    function use(){
+        var txt2 = document.getElementById("coutxt").value;
+        alert(txt2+" - GONGCHYA 1일 무료체험 쿠폰(유효기간 2022-08-29~2023-08-29)이 사용되었습니다.")
+        location.href="home.html";
+    }
+</script>
+
+</html>

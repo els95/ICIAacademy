@@ -1,0 +1,544 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gong-Cha</title>
+    <!-- 여기에 CSS 링크-->
+    <link rel="shortcut icon" href="image/파비콘.ico">
+    <link type="text/css" rel="stylesheet" href="slider1.css" />
+    <link type="text/css" rel="stylesheet" href="style4.css" />
+    <style>
+        body {
+            background-color: rgb(27, 27, 27);
+            color: darkgray;
+        }
+
+        #main_section {
+            width: 500px;
+            height: 1100px;
+            margin: 0 auto;
+            margin-top: 100px;
+            padding-left: 100px;
+            padding-top: 60px;
+            background-color: rgb(37, 37, 37);
+
+
+        }
+
+        #join {
+            width: 400px;
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+        #join::placeholder {
+            text-align: right;
+        }
+
+
+        #pwd {
+            width: 400px;
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+        #repwd {
+            width: 400px;
+            height: 40px;
+            margin-bottom: 20px;
+
+        }
+
+        #na {
+            width: 400px;
+            height: 40px;
+            margin-bottom: 20px;
+
+        }
+
+        #mon {
+            width: 200px;
+            height: 45px;
+            font-weight: 530;
+            margin-bottom: 20px;
+
+        }
+
+        #recheck {
+            width: 70px;
+            height: 20px;
+
+        }
+
+        #gen {
+            width: 422px;
+            height: 50px;
+            margin-bottom: 20px;
+
+        }
+
+        #rem {
+            width: 325px;
+            height: 45px;
+            float: left;
+            /* 아이디 입력했을때 이메일주소 사라짐 */
+
+        }
+
+        #email {
+            width: 75px;
+            height: 45px;
+            margin-bottom: 20px;
+            border-style: none;
+
+        }
+
+        #rem::placeholder {
+            text-align: right;
+        }
+
+        #mo {
+            width: 95px;
+            height: 45px;
+
+        }
+
+
+        #da {
+            width: 95px;
+            height: 45px;
+            border-style: none;
+        }
+
+
+        #su {
+            width: 75px;
+            height: 60px;
+            font-size: 12pt;
+            background-color: #1351f9;
+            color: white;
+            border-radius: 40px;
+            border-style: none;
+
+        }
+
+        #ph {
+            width: 425px;
+            height: 53px;
+            margin-bottom: 20px;
+
+        }
+
+        #dl {
+            width: 330px;
+            height: 45px;
+            margin-bottom: 20px;
+
+        }
+
+        #bu {
+            width: 75px;
+            height: 45px;
+            display: none;
+        }
+
+        #ch {
+            float: left;
+            width: 420px;
+            height: 40px;
+        }
+
+        #ch1 {
+            float: left;
+            width: 345px;
+            height: 40px;
+            display: none;
+        }
+
+        .jointxt {
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        #main_section>h3 {
+            font-size: medium;
+            font-weight: 500;
+            margin-bottom:5px;
+        }
+
+        #su {
+            width: 420px;
+            height: 50px;
+        }
+
+        #send {
+            position:relative;
+            top:2px;
+            margin-left: -5px;
+            width: 75px;
+            height: 45px;
+        }
+
+        .co {
+            background-color: rgb(47, 47, 47);
+            border-style: none;
+            color: whitesmoke;
+            padding-left: 20px;
+            border-radius: 5px;
+            /* 아이디 입력했을때 이메일주소 사라짐 */
+        }
+
+        .co1 {
+            background-color: #1351f9;
+            color: white;
+            border-style: none;
+        }
+
+        section {
+            height: 1250px;
+        }
+        button{
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body onscroll="cover2()">
+    <!-- TOP, DOWN -->
+    <div id="cover1">
+        <div id="top" onclick="top1()">▲</div>
+        <div id="down" onclick="down1()">▼</div>
+    </div>
+    <!-- 팝업창 -->
+    <div id="whole">
+    </div>
+    <div id="popup">
+        <div id="exit" onclick="exit1()">x</div>
+        <img id="popup_search" src="image/돋보기.png">
+        <input type="text" placeholder="검색어를 입력해 주세요.">
+        <img id="recent" src="image/팝업.png">
+        <h3>최근 검색내역이 없네요.<br>요즘 인기있는 검색어를 추천해드릴게요.</h3>
+        <div id="recom">
+            <a href="enter.html"><span>#GongChya ORIGINAL</span></a>
+            <a href="movie.html"><span>#GongChya 영화 업데이트</span></a>
+            <a href="drama.html"><span>#최초공개 #해외시리즈</span></a>
+            <a href="movie.html"><span>#해외시리즈 TOP</span></a>
+        </div>
+        <div>
+            <a href="drama.html"><span>#GongChya에서만 정주행</span></a>
+            <a href="movie.html"><span>#이 영화 찾으세요? #TV속 영화</span></a>
+        </div>
+    </div>
+    <header id="top2">
+        <div id="h_top">
+            <div id="h_top_wrap">
+                <nav class="t_nav">
+                    <ul>
+                        <a href="login-수정.html"
+                                style="text-decoration:none; color:white; font-size: 13px;">
+                                <li>로그인</li>
+                        </a>
+                        <a><li><div>이용권</div></li></a>
+                        <a href="coupon.html"><li>쿠폰ㆍ코인</li></a>
+                        <a><li>공챠온</li></a>
+                        <a href="event.html"><li>이벤트</li></a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="h_bottom">
+            <h1><a href="home.html"><img src="image/공챠.png" style="width:200px"></a></h1>
+            <nav class="m_nav">
+                <ul>
+                    <li>
+                        <h3><a href="home.html" style="text-decoration:none; color:white;">홈</a></h3>
+                    </li>
+                    <li>
+                        <h3 id="category">카테고리
+                            <div id="drop_down">
+                                <div id="drop_down_top">
+                                    <li>
+                                        <h5>전체 카테고리 보기</h5>
+                                    </li>
+                                </div>
+                                <div id="recommand">
+                                    <li>
+                                        <h5>추천 메뉴</h5>
+                                    </li>
+                                </div>
+                                <div id="drop_down_bottom">
+                                    <a href="drama.html" style="text-decoration:none; color:gray;">
+                                        <li>드라마</li>
+                                    </a>
+                                    <a href="enter.html" style="text-decoration:none; color:gray;">
+                                       <li>예능</li>
+                                    </a>
+                                    <a href="movie.html" style="text-decoration:none; color:gray;">
+                                        <li>영화</li>
+                                    </a>
+                                    <a>
+                                        <li>영화플러스</li>
+                                    </a>
+                                    <a>
+                                        <li>해외시리즈</li>
+                                    </a>
+                                    <a>
+                                        <li>프로야구</li>
+                                    </a>
+                                    <a>
+                                        <li>ORIGINAL</li>
+                                    </a>
+                                    <a>
+                                        <li>CLASSIC</li>
+                                    </a>
+                                </div>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>LIVE</h3>
+                    </li>
+                    <li>
+                        <a href="login-수정.html"><h3>MY</h3></a>
+                    </li><br>
+        <div id="button">
+            <input type="text" placeholder="검색하기" id="search">
+            <img src="image/돋보기.png" onclick="popup1()">
+        </div>
+        </div>
+        </ul>
+        </nav>
+        </div>
+    </header>
+    <section>
+        <div id="main_section">
+            <h1 id="jointxt">회원가입</h1><br><br>
+            <form method="post"></form>
+
+
+            <h3>아이디</h3>
+            <input type="text" class="co" name=id id="join" placeholder="@Gong-Chya.com  " autofocus required> <br>
+
+            <h3>비밀번호</h3>
+            <input type="password" class="co" name="passward" id="pwd" maxlength="15" required> <br>
+
+            <h3> 비밀번호 확인</h3>
+            <input type="password" class="co" name="passwardrecheck" id="repwd" maxlength="15" required>
+
+            <h3>이름</h3>
+            <input type="text" class="co" name="name" id="na" maxlength="10" required> <br>
+
+            <h3>생년월일</h3>
+            <input type="text" class="co" name="aaa" placeholder="년(4자)" id="mon" maxlength="4">
+            <select name="mon" id="mo" class="co">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option><br>
+
+            </select>
+
+            <select name="day" id="da" class="co">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option><br>
+            </select>
+
+            <h3>성별</h3>
+            <select name="gender" id="gen" class="co">
+                <option value="s">선택</option>
+                <option value="f">여성</option>
+                <option value="m">남성</option>
+                <option value="us">선택 안 함</option><br>
+            </select>
+
+            <h3>본인 확인 이메일</h3>
+            <input type="text" class="co" name="emailrecheck" id="rem" placeholder="@Gong-Chya.com  " required>
+            <button type="summut" class="co1" id="email" onclick="next()">전송하기</button><br><br>
+
+
+
+            <h3>휴대전화</h3>
+            <select name="na" id="ph" class="co">
+                <option value="ko">대한민국+82</option>
+                <option value="ch">중국+86</option>
+                <option value="ja">일본+81</option>
+                <option value="sp">스페인+34</option>
+                <option value="nz">뉴질랜드+64</option>
+                <option value="os">오스트리아+47</option>
+
+
+                <br>
+
+
+            </select>
+
+            <p><input type="text" name="call" class="co" placeholder="전화번호입력" id="dl">
+
+                <button type="button" class="co1" onclick="send()" id="send">전송하기</button><br>
+            </p>
+
+
+            <p><input type="text" name=rere id="ch" placeholder="인증번호입력" disabled value="  인증번호를 입력하세요">
+                <input type="text" name=rere id="ch1" placeholder="인증번호입력">
+
+
+
+                <button type="button" id="bu" class="co1" onclick="alert('인증번호가 확인되었습니다')">확인</button><br>
+            </p>
+
+            <br>
+            <br>
+            <br>
+
+            <a href="home.html"><button type="button" id="su" onclick="alert('가입을 완료하였습니다! 축하드립니다.')">가입하기</button></a>
+        </div>
+    </section>
+    <footer>
+        <div id="f_top">
+            <div id="f_top_wrap">
+                <nav class="f_nav">
+                    <ul>
+                        <li>회사소개</li>
+                        <li>개인정보취급방침</li>
+                        <li>서비스약관</li>
+                        <li>제휴문의</li>
+                        <li>이메일수집거부</li>
+                    </ul>
+                </nav>
+                <!-- <div class="f_site">패밀리사이트</div> -->
+            </div>
+        </div>
+        <div id="f_bottom">
+            <div id="f_bottom_wrap">
+                <h1><a href="home.html"><img src="image/공챠.png"></a></h1>
+                <!-- <address>주소</address>
+                    <p>카피라이트</p> -->
+            </div>
+            <div id="member">
+                <a><p>조원 :</p></a>
+                <a href="공정배/introduce-1.html"><p>공정배</p></a>
+                <a href="신동희/introduce.html"><p>신동희</p></a>
+                <a href="박지은/self.html"><p>박지은</p></a>
+                <a href=""><p>김진희</p></a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    var pos1 = document.getElementById("pos1");
+    var pos2 = document.getElementById("pos2");
+    var pos3 = document.getElementById("pos3");
+    var pos4 = document.getElementById("pos4");
+    var pos = [pos1, pos2, pos3, pos4];
+    var i = 0;
+    var a = 5;
+    var b = 0;
+    setInterval(function () {
+        if (i == 4) {
+            i = 0;
+        }
+        pos[i].checked = true;
+        i++;
+    }, 3000);
+    function stop1() {
+        stop = document.getElementById("stop");
+        start = document.getElementById("start");
+        stop.style.display = "none";
+        start.style.display = "inline-block";
+        b = i;
+        i = a;
+    };
+    function start1() {
+        stop = document.getElementById("stop");
+        start = document.getElementById("start");
+        stop.style.display = "inline-block";
+        start.style.display = "none";
+        i = b;
+    }
+    function detail() {
+        location.href = "detail.html";
+    }
+    function popup1() {
+        popup = document.getElementById("popup");
+        whole = document.getElementById("whole");
+        whole.style.display = "block";
+        popup.style.display = "block";
+    }
+    function exit1() {
+        popup = document.getElementById("popup");
+        whole = document.getElementById("whole");
+        whole.style.display = "none";
+        popup.style.display = "none";
+    }
+    function cover2() {
+        var j = 1;
+        var cover1 = document.getElementById("cover1");
+        cover1.style.opacity = j;
+        clearInterval(fade);
+        var fade = setInterval(function () {
+            j--;
+            cover1.style.opacity = j;
+            clearInterval(fade);
+        }, 2000)
+    }
+    function top1() {
+        location.href = "#top2";
+    }
+    function down1() {
+        location.href = "#member";
+    }
+    function next(){
+        alert('이메일이 전송되었습니다');
+        dl=document.getElementById("dl");
+        dl.focus();
+    }
+    function send() {
+        ch = document.getElementById("ch");
+        ch1 = document.getElementById("ch1");
+        bu = document.getElementById("bu");
+        alert("인증번호가 전송되었습니다");
+        bu.style.display = "inline-block";
+        ch.style.display = "none";
+        ch1.style.display = "inline-block";
+        ch1.focus();
+    }
+</script>
+
+</html>

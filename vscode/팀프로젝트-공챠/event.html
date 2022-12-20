@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gong-Cha</title>
+    <!-- 여기에 CSS 링크-->
+    <link rel="shortcut icon" href="image/파비콘.ico">
+    <link type="text/css" rel="stylesheet" href="slider1.css" />
+    <link type="text/css" rel="stylesheet" href="style4.css" />
+    <style>
+        body {
+            color: white;
+        }
+
+        section {
+            width: 100%;
+            height:700px;
+        }
+
+        .event-top {
+            width: 100%;
+            padding: 49px 0 44px;
+            background-color: #252525;
+            text-align: center;
+            display: block;
+        }
+
+        .event-wrap {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            box-sizing: border-box;
+            display: block;
+            background-color: #252525;
+            color: white;
+            padding-bottom: 70px;
+        }
+
+        .ev>div {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            width: 500px;
+            float: left;
+            text-align: center;
+            margin-left: 100px;
+
+        }
+
+        .tg {
+            width: 70%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin: 0 auto;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        .tg td {
+            border-top: 1px solid rgb(47, 47, 47);
+            border-bottom: 1px solid rgb(47, 47, 47);
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            overflow: hidden;
+            padding: 10px 5px;
+            word-break: normal;
+        }
+
+        /* .tg th{
+                    border: 1px solid black;
+                    font-family:Arial, sans-serif;
+                    font-size:14px;
+                    font-weight:normal;
+                    overflow:hidden;
+                    padding:10px 5px;
+                    word-break:normal;
+                } */
+        .tg .tg-0lax {
+            text-align: left;
+            vertical-align: middle;
+            position: relative;
+            cursor: pointer;
+        }
+
+        td>span {
+            margin-left: 20px;
+            position: absolute;
+            margin-top: 50px;
+            color: rgb(165, 165, 165);
+        }
+        #presentation2{
+            position:relative;
+            display:none;
+        }
+        #evt_but>h3{
+            float:left;
+            margin-left:2%;
+            margin-top:36px;
+            cursor:pointer;
+            line-height:-50px;
+            position:relative;
+            top:10px;
+        }
+        #evt_but>h3:first-child{
+            margin-left:12%;
+        }
+        #presentation2 b{
+            color: rgb(165, 165, 165);
+        }
+        #ing_evt{
+            height:37px;
+        }
+        #ing_pre1{
+            position:relative;
+            top:-25px;
+            height:37px;
+
+        }
+    </style>
+</head>
+
+<body onscroll="cover2()">
+    <!-- TOP, DOWN -->
+    <div id="cover1">
+        <div id="top" onclick="top1()">▲</div>
+        <div id="down" onclick="down1()">▼</div>
+    </div>
+    <!-- 팝업창 -->
+    <div id="whole">
+    </div>
+    <div id="popup">
+        <div id="exit" onclick="exit1()">x</div>
+        <img id="popup_search" src="image/돋보기.png">
+        <input type="text" placeholder="검색어를 입력해 주세요.">
+        <img id="recent" src="image/팝업.png">
+        <h3>최근 검색내역이 없네요.<br>요즘 인기있는 검색어를 추천해드릴게요.</h3>
+        <div id="recom">
+            <a href="enter.html"><span>#GongChya ORIGINAL</span></a>
+            <a href="movie.html"><span>#GongChya 영화 업데이트</span></a>
+            <a href="drama.html"><span>#최초공개 #해외시리즈</span></a>
+            <a href="movie.html"><span>#해외시리즈 TOP</span></a>
+        </div>
+        <div>
+            <a href="drama.html"><span>#GongChya에서만 정주행</span></a>
+            <a href="movie.html"><span>#이 영화 찾으세요? #TV속 영화</span></a>
+        </div>
+    </div>
+    <header id="top2">
+        <div id="h_top">
+            <div id="h_top_wrap">
+                <nav class="t_nav">
+                    <ul>
+                        <a href="login-수정.html"
+                                style="text-decoration:none; color:white; font-size: 13px;">
+                                <li>로그인</li>
+                        </a>
+                        <a><li><div>이용권</div></li></a>
+                        <a href="coupon.html"><li>쿠폰ㆍ코인</li></a>
+                        <a><li>공챠온</li></a>
+                        <a href="event.html"><li>이벤트</li></a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="h_bottom">
+            <h1><a href="home.html"><img src="image/공챠.png" style="width:200px"></a></h1>
+            <nav class="m_nav">
+                <ul>
+                    <li>
+                        <h3><a href="home.html" style="text-decoration:none; color:white;">홈</a></h3>
+                    </li>
+                    <li>
+                        <h3 id="category">카테고리
+                            <div id="drop_down">
+                                <div id="drop_down_top">
+                    <li>
+                        <h5>전체 카테고리 보기</h5>
+                    </li>
+        </div>
+        <div id="recommand">
+            <li>
+                <h5>추천 메뉴</h5>
+            </li>
+        </div>
+        <div id="drop_down_bottom">
+            <a href="drama.html" style="text-decoration:none; color:gray;">
+                <li>드라마</li>
+            </a>
+            <a href="enter.html" style="text-decoration:none; color:gray;">
+                <li>예능</li>
+            </a>
+            <a href="movie.html" style="text-decoration:none; color:gray;">
+                <li>영화</li>
+            </a>
+            <a>
+                <li>영화플러스</li>
+            </a>
+            <a>
+                <li>해외시리즈</li>
+            </a>
+            <a>
+                <li>프로야구</li>
+            </a>
+            <a>
+                <li>ORIGINAL</li>
+            </a>
+            <a>
+                <li>CLASSIC</li>
+            </a>
+        </div>
+        </h3>
+        </li>
+        <li>
+            <h3>LIVE</h3>
+        </li>
+        <li>
+            <a href="login-수정.html"><h3>MY</h3></a>
+        </li><br>
+        <div id="button">
+            <input type="text" placeholder="검색하기" id="search">
+            <img src="image/돋보기.png" onclick="popup1()">
+        </div>
+        </div>
+        </ul>
+        </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="event-top"></div>
+        <div class="event-wrap">
+            <img src="image/event/box.png" alt="선물상자 이미지">
+            <h2 topindex="0" class="event-top-text">GongChya의 다양한 이벤트를 만나보세요.</h2>
+        </div>
+        <div id="evt_but">
+            <h3 id="ing_evt" onclick="ing_evt()">진행중 이벤트</h3>
+            <h3 id="ing_pre" onclick="ing_pre()">당첨자 발표
+            </h3>
+        </div>
+        <table class="tg" id="presentation1" table-layout: fixed; width: 739px;>
+            <colgroup>
+                <col style="width: 400px">
+                <col style="width: 356px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <td class="tg-0lax"><img src="image/event/파나마.jpg" alt="Image" width="260" height="147">
+                        <span><b style="font-size: 20px;">
+                                <파나마>론칭 프로모션
+                            </b><br><br>
+                            <b>기간</b> 2022-08-25 ~ 2022-09-17<br>
+                            <b>경품</b> 스타벅스 기분좋은 하루(ICE)모바일 기프티콘</span>
+                    </td>
+                    <td class="tg-0lax"><img src="image/event/보일링.jpg" alt="Image" width="260" height="147">
+                        <span><b style="font-size: 20px;">
+                                <보일링 포인트>론칭 프로모션
+                            </b><br><br>
+                            <b>기간</b> 2022-08-24 ~ 2022-09-16<br>
+                            <b>경품</b> BHC 기프티콘 1만원권</span>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tg-0lax"><img src="image/event/탑건.jpg" alt="Image" width="260" height="147">
+                        <span><b style="font-size: 20px;">
+                                <탑건 : 매버릭>론칭 프로모션 및 구작 할인전
+                            </b><br><br>
+                            <b>기간</b> 2022-08-17 ~ 2022-09-13<br>
+                            <b>경품</b> BHC 기프티콘 1만원권</span>
+                    </td>
+                    <td class="tg-0lax"><img src="image/event/공범.jpg" alt="Image" width="260" height="147">
+                        <span><b style="font-size: 20px;">올여름 현상품이 걸려있는 공범찾기!</b><br><br>
+                            <b>기간</b> 2022-08-12 ~ 2022-08-31<br>
+                            <b>경품</b> 백화점 상품권/ 에어팟 맥스 헤드셋</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="tg" id="presentation2" table-layout: fixed; width: 739px;>
+            <colgroup>
+                <col style="width: 400px">
+                <col style="width: 356px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <td class="tg-0lax"><img src="image/테드.jpg" alt="Image" width="260" height="147">
+                        <span><b style="font-size: 20px;">
+                                <유나바머 : 테드 K >론칭 프로모션
+                            </b><br><br>
+                            <b>발표</b> &nbsp;&nbsp;2022-08-26<br>
+                    </td>
+                    <td class="tg-0lax"><img src="image/엘비스.jpg" alt="Image" width="260" height="147">
+                        <span><b style="font-size: 20px;">
+                                <엘비스>론칭 프로모션
+                            </b><br><br>
+                            <b>발표</b> &nbsp;&nbsp;2022-08-26<br>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tg-0lax"><img src="image/소니.jpg" alt="Image" width="260" height="147">
+                        <span><b style="font-size: 20px;">
+                                SONY 여름 특집 할인전
+                            </b><br><br>
+                            <b>발표</b> &nbsp;&nbsp;2022-08-24<br>
+                    </td>
+                    <td class="tg-0lax"><img src="image/버즈.jpg" alt="Image" width="260" height="147">
+                        <span><b style="font-size: 20px;"><버즈 라이트이어> 론칭 프로모션</b><br><br>
+                            <b>발표</b> &nbsp;&nbsp;2022-08-26<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <footer>
+            <div id="f_top">
+                <div id="f_top_wrap">
+                    <nav class="f_nav">
+                        <ul>
+                            <li>회사소개</li>
+                            <li>개인정보취급방침</li>
+                            <li>서비스약관</li>
+                            <li>제휴문의</li>
+                            <li>이메일수집거부</li>
+                        </ul>
+                    </nav>
+                    <!-- <div class="f_site">패밀리사이트</div> -->
+                </div>
+            </div>
+            <div id="f_bottom">
+                <div id="f_bottom_wrap">
+                    <h1><a href="home.html"><img src="image/공챠.png"></a></h1>
+                    <!-- <address>주소</address>
+                            <p>카피라이트</p> -->
+                </div>
+                <div id="member">
+                    <a><p>조원 :</p></a>
+                    <a href="공정배/introduce-1.html"><p>공정배</p></a>
+                    <a href="신동희/introduce.html"><p>신동희</p></a>
+                    <a href="박지은/self.html"><p>박지은</p></a>
+                    <a href="자기소개_진희.html"><p>김진희</p></a>
+                </div>
+            </div>
+        </footer>
+
+</body>
+<script>
+    var pos1 = document.getElementById("pos1");
+    var pos2 = document.getElementById("pos2");
+    var pos3 = document.getElementById("pos3");
+    var pos4 = document.getElementById("pos4");
+    var pos = [pos1, pos2, pos3, pos4];
+    var i = 0;
+    var a = 5;
+    var b = 0;
+    setInterval(function () {
+        if (i == 4) {
+            i = 0;
+        }
+        pos[i].checked = true;
+        i++;
+    }, 3000);
+    function stop1() {
+        stop = document.getElementById("stop");
+        start = document.getElementById("start");
+        stop.style.display = "none";
+        start.style.display = "inline-block";
+        b = i;
+        i = a;
+    };
+    function start1() {
+        stop = document.getElementById("stop");
+        start = document.getElementById("start");
+        stop.style.display = "inline-block";
+        start.style.display = "none";
+        i = b;
+    }
+    function detail() {
+        location.href = "detail.html";
+    }
+    function popup1() {
+        popup = document.getElementById("popup");
+        whole = document.getElementById("whole");
+        whole.style.display = "block";
+        popup.style.display = "block";
+    }
+    function exit1() {
+        popup = document.getElementById("popup");
+        whole = document.getElementById("whole");
+        whole.style.display = "none";
+        popup.style.display = "none";
+    }
+    function cover2() {
+        var j = 1;
+        var cover1 = document.getElementById("cover1");
+        cover1.style.opacity = j;
+        clearInterval(fade);
+        var fade = setInterval(function () {
+            j--;
+            cover1.style.opacity = j;
+            clearInterval(fade);
+        }, 2000)
+    }
+    function top1() {
+        location.href = "#top2";
+    }
+    function down1() {
+        location.href = "#member";
+    }
+
+    //evt 페이지
+    function ing_evt(){
+        presentation1=document.getElementById("presentation1");
+        presentation2=document.getElementById("presentation2");
+        presentation1.style.display="table";
+        presentation2.style.display="none";
+    }
+    function ing_pre(){
+        presentation1=document.getElementById("presentation1");
+        presentation2=document.getElementById("presentation2");
+        presentation1.style.display="none";
+        presentation2.style.display="table";
+    }
+</script>
+
+</html>

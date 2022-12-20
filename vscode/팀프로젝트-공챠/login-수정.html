@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gong-Cha</title>
+    <!-- 여기에 CSS 링크-->
+    <link rel="shortcut icon" href="image/파비콘.ico">
+    <link type="text/css" rel="stylesheet" href="slider1.css" />
+    <link type="text/css" rel="stylesheet" href="style4.css" />
+    <style>
+        body {
+            background-color: rgb(27, 27, 27);
+            /* display: flex; */
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+
+        .login {
+            width: 500px;
+            height: 500px;
+            background-color: rgb(37, 37, 37);
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        #login_box1 {
+            color: whitesmoke;
+            padding: 10px;
+        }
+
+        #login_box2 {
+            color: rgb(165, 165, 165);
+            font-size: large;
+        }
+
+        #id,
+        #pw {
+            width: 80%;
+            height: 50px;
+            border-radius: 5px;
+            background-color: rgb(47, 47, 47);
+            border-style: none;
+            color: whitesmoke;
+            font-size: large;
+            padding-left: 20px;
+        }
+
+        #pw {
+            margin-top: 10px;
+        }
+
+        #id {
+            margin-top: 20px;
+        }
+
+        #id::placeholder,
+        #pw::placeholder {
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        #a1 {
+            display: inline-block;
+            float: left;
+            margin-left: 40px;
+            margin-top: 20px;
+            color: rgb(165, 165, 165);
+        }
+
+        .memo {
+            zoom: 1.5;
+            vertical-align: middle;
+        }
+
+        #noid,
+        #noid1 {
+            color: #ff27a3;
+            float: left;
+            margin-left: 50px;
+            font-size: small;
+
+        }
+
+        #bt,
+        #join {
+            display: block;
+            border-radius: 50px;
+            width: 400px;
+            height: 50px;
+            background-color: #1351f9;
+            ;
+            margin-left: 50px;
+            color: whitesmoke;
+            font-size: 15px;
+            border: none;
+        }
+
+        #bt {
+            margin-top: 60px;
+        }
+
+        #bt:hover {
+            cursor: pointer;
+        }
+
+        #join {
+            margin-top: 10px;
+        }
+
+        #join:hover {
+            cursor: pointer;
+        }
+
+        section {
+            height: 600px;
+        }
+
+        footer {
+            width: 100%;
+            margin-left: 0px;
+        }
+    </style>
+</head>
+
+<body onscroll="cover2()">
+    <!-- TOP, DOWN -->
+    <div id="cover1">
+        <div id="top" onclick="top1()">▲</div>
+        <div id="down" onclick="down1()">▼</div>
+    </div>
+    <!-- 팝업창 -->
+    <div id="whole">
+    </div>
+    <div id="popup">
+        <div id="exit" onclick="exit1()">x</div>
+        <img id="popup_search" src="image/돋보기.png">
+        <input type="text" placeholder="검색어를 입력해 주세요.">
+        <img id="recent" src="image/팝업.png">
+        <h3>최근 검색내역이 없네요.<br>요즘 인기있는 검색어를 추천해드릴게요.</h3>
+        <div id="recom">
+            <a href="enter.html"><span>#GongChya ORIGINAL</span></a>
+            <a href="movie.html"><span>#GongChya 영화 업데이트</span></a>
+            <a href="drama.html"><span>#최초공개 #해외시리즈</span></a>
+            <a href="movie.html"><span>#해외시리즈 TOP</span></a>
+        </div>
+        <div>
+            <a href="drama.html"><span>#GongChya에서만 정주행</span></a>
+            <a href="movie.html"><span>#이 영화 찾으세요? #TV속 영화</span></a>
+        </div>
+    </div>
+    <header id="top2">
+        <div id="h_top">
+            <div id="h_top_wrap">
+                <nav class="t_nav">
+                    <ul>
+                        <a href="login-수정.html" style="text-decoration:none; color:white; font-size: 13px;">
+                            <li>로그인</li>
+                        </a>
+                        <a>
+                            <li>
+                                <div>이용권</div>
+                            </li>
+                        </a>
+                        <a href="coupon.html">
+                            <li>쿠폰ㆍ코인</li>
+                        </a>
+                        <a>
+                            <li>공챠온</li>
+                        </a>
+                        <a href="event.html">
+                            <li>이벤트</li>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="h_bottom">
+            <h1><a href="home.html"><img src="image/공챠.png" style="width:200px"></a></h1>
+            <nav class="m_nav">
+                <ul>
+                    <li>
+                        <h3><a href="home.html" style="text-decoration:none; color:white;">홈</a></h3>
+                    </li>
+                    <li>
+                        <h3 id="category">카테고리
+                            <div id="drop_down">
+                                <div id="drop_down_top">
+                    <li>
+                        <h5>전체 카테고리 보기</h5>
+                    </li>
+        </div>
+        <div id="recommand">
+            <li>
+                <h5>추천 메뉴</h5>
+            </li>
+        </div>
+        <div id="drop_down_bottom">
+            <a href="drama.html" style="text-decoration:none; color:gray;">
+                <li>드라마</li>
+            </a>
+            <a href="enter.html" style="text-decoration:none; color:gray;">
+                <li>예능</li>
+            </a>
+            <a href="movie.html" style="text-decoration:none; color:gray;">
+                <li>영화</li>
+            </a>
+            <a>
+                <li>영화플러스</li>
+            </a>
+            <a>
+                <li>해외시리즈</li>
+            </a>
+            <a>
+                <li>프로야구</li>
+            </a>
+            <a>
+                <li>ORIGINAL</li>
+            </a>
+            <a>
+                <li>CLASSIC</li>
+            </a>
+        </div>
+        </h3>
+        </li>
+        <li>
+            <h3>LIVE</h3>
+        </li>
+        <li>
+            <a href="login-수정.html">
+                <h3>MY</h3>
+            </a>
+        </li><br>
+        <div id="button">
+            <input type="text" placeholder="검색하기" id="search">
+            <img src="image/돋보기.png" onclick="popup1()">
+        </div>
+        </div>
+        </ul>
+        </nav>
+        </div>
+    </header>
+    <section>
+        <div class="login">
+            <h1 id="login_box1">로그인</h1>
+            <span id="login_box2">GONGCHYA 계정으로 로그인</span><br><br>
+            <input type="text" id="id" placeholder="이메일주소 또는 아이디"><br>
+            <span id="noid"></span>
+            <input type="password" id="pw" placeholder="비밀번호"><br>
+            <span id="noid1"></span><br>
+            <div id="a1">
+                <input type="checkbox" class="memo"><span>아이디저장</span>
+                <input type="checkbox" class="memo"><span>자동로그인</span>
+            </div>
+
+            <!-- <input type="button" value="로그인" id="bt"> -->
+            <button id="bt" onclick="f()">로그인</button>
+            <button id="join" onclick="location='join.html'">회원가입</button>
+        </div>
+    </section>
+    <footer>
+        <div id="f_top">
+            <div id="f_top_wrap">
+                <nav class="f_nav">
+                    <ul>
+                        <li>회사소개</li>
+                        <li>개인정보취급방침</li>
+                        <li>서비스약관</li>
+                        <li>제휴문의</li>
+                        <li>이메일수집거부</li>
+                    </ul>
+                </nav>
+                <!-- <div class="f_site">패밀리사이트</div> -->
+            </div>
+        </div>
+        <div id="f_bottom">
+            <div id="f_bottom_wrap">
+                <h1><a href="home.html"><img src="image/공챠.png"></a></h1>
+                <!-- <address>주소</address>
+                    <p>카피라이트</p> -->
+            </div>
+            <div id="member">
+                <a>
+                    <p>조원 :</p>
+                </a>
+                <a href="공정배/introduce-1.html">
+                    <p>공정배</p>
+                </a>
+                <a href="신동희/introduce.html">
+                    <p>신동희</p>
+                </a>
+                <a href="박지은/self.html">
+                    <p>박지은</p>
+                </a>
+                <a href="">
+                    <a href="자기소개_진희.html"><p>김진희</p></a>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    function f() {
+        var id = document.getElementById("id").value;
+        var noid = document.getElementById("noid");
+        var pw = document.getElementById("pw").value;
+        var noid1 = document.getElementById("noid1");
+        if (id == "") {
+            document.getElementById("noid").innerHTML =
+                "이메일 또는 아이디를 입력하세요!"
+            document.getElementById("noid1").innerHTML =
+                " "
+        } else if (pw == "") {
+            document.getElementById("noid").innerHTML =
+                " "
+            document.getElementById("noid1").innerHTML =
+                "비밀번호를 입력해주세요!"
+
+        } else {
+            location.href = "home.html";
+        }
+    }
+    var pos1 = document.getElementById("pos1");
+    var pos2 = document.getElementById("pos2");
+    var pos3 = document.getElementById("pos3");
+    var pos4 = document.getElementById("pos4");
+    var pos = [pos1, pos2, pos3, pos4];
+    var i = 0;
+    var a = 5;
+    var b = 0;
+    setInterval(function () {
+        if (i == 4) {
+            i = 0;
+        }
+        pos[i].checked = true;
+        i++;
+    }, 3000);
+    function stop1() {
+        stop = document.getElementById("stop");
+        start = document.getElementById("start");
+        stop.style.display = "none";
+        start.style.display = "inline-block";
+        b = i;
+        i = a;
+    };
+    function start1() {
+        stop = document.getElementById("stop");
+        start = document.getElementById("start");
+        stop.style.display = "inline-block";
+        start.style.display = "none";
+        i = b;
+    }
+    function detail() {
+        location.href = "detail.html";
+    }
+    function popup1() {
+        popup = document.getElementById("popup");
+        whole = document.getElementById("whole");
+        whole.style.display = "block";
+        popup.style.display = "block";
+    }
+    function exit1() {
+        popup = document.getElementById("popup");
+        whole = document.getElementById("whole");
+        whole.style.display = "none";
+        popup.style.display = "none";
+    }
+    function cover2() {
+        var j = 1;
+        var cover1 = document.getElementById("cover1");
+        cover1.style.opacity = j;
+        clearInterval(fade);
+        var fade = setInterval(function () {
+            j--;
+            cover1.style.opacity = j;
+            clearInterval(fade);
+        }, 2000)
+    }
+    function top1() {
+        location.href = "#top2";
+    }
+    function down1() {
+        location.href = "#member";
+    }
+</script>
+
+</html>

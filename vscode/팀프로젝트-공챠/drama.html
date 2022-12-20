@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gong-Cha</title>
+    <!-- 여기에 CSS 링크-->
+    <link rel="shortcut icon" href="image/파비콘.ico">
+    <link type="text/css" rel="stylesheet" href="slider1.css" />
+    <link type="text/css" rel="stylesheet" href="style4.css" />
+</head>
+
+<body onscroll="cover2()">
+    <!-- TOP, DOWN -->
+    <div id="cover1">
+        <div id="top" onclick="top1()">▲</div>
+        <div id="down" onclick="down1()">▼</div>
+    </div>
+    <!-- 팝업창 -->
+    <div id="whole">
+    </div>
+    <div id="popup">
+        <div id="exit" onclick="exit1()">x</div>
+        <img id="popup_search" src="image/돋보기.png">
+        <input type="text" placeholder="검색어를 입력해 주세요.">
+        <img id="recent" src="image/팝업.png">
+        <h3>최근 검색내역이 없네요.<br>요즘 인기있는 검색어를 추천해드릴게요.</h3>
+        <div id="recom">
+            <a href="enter.html"><span>#GongChya ORIGINAL</span></a>
+            <a href="movie.html"><span>#GongChya 영화 업데이트</span></a>
+            <a href="drama.html"><span>#최초공개 #해외시리즈</span></a>
+            <a href="movie.html"><span>#해외시리즈 TOP</span></a>
+        </div>
+        <div>
+            <a href="drama.html"><span>#GongChya에서만 정주행</span></a>
+            <a href="movie.html"><span>#이 영화 찾으세요? #TV속 영화</span></a>
+        </div>
+    </div>
+    <header id="top2">
+        <div id="h_top">
+            <div id="h_top_wrap">
+                <nav class="t_nav">
+                    <ul>
+                        <a href="login-수정.html"
+                                style="text-decoration:none; color:white; font-size: 13px;">
+                                <li>로그인</li>
+                        </a>
+                        <a><li><div>이용권</div></li></a>
+                        <a href="coupon.html"><li>쿠폰ㆍ코인</li></a>
+                        <a><li>공챠온</li></a>
+                        <a href="event.html"><li>이벤트</li></a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="h_bottom">
+            <h1><a href="home.html"><img src="image/공챠.png" style="width:200px"></a></h1>
+            <nav class="m_nav">
+                <ul>
+                    <li>
+                        <h3><a href="home.html" style="text-decoration:none; color:white;">홈</a></h3>
+                    </li>
+                    <li>
+                        <h3 id="category">카테고리
+                            <div id="drop_down">
+                                <div id="drop_down_top">
+                    <li>
+                        <h5>전체 카테고리 보기</h5>
+                    </li>
+        </div>
+        <div id="recommand">
+            <li>
+                <h5>추천 메뉴</h5>
+            </li>
+        </div>
+        <div id="drop_down_bottom">
+            <a href="drama.html" style="text-decoration:none; color:gray;">
+                <li>드라마</li>
+            </a>
+            <a href="enter.html" style="text-decoration:none; color:gray;">
+                <li>예능</li>
+            </a>
+            <a href="movie.html" style="text-decoration:none; color:gray;">
+                <li>영화</li>
+            </a>
+            <a>
+                <li>영화플러스</li>
+            </a>
+            <a>
+                <li>해외시리즈</li>
+            </a>
+            <a>
+                <li>프로야구</li>
+            </a>
+            <a>
+                <li>ORIGINAL</li>
+            </a>
+            <a>
+                <li>CLASSIC</li>
+            </a>
+        </div>
+        </h3>
+        </li>
+        <li>
+            <h3>LIVE</h3>
+        </li>
+        <li>
+            <a href="login-수정.html"><h3>MY</h3></a>
+        </li><br>
+        <div id="button">
+            <input type="text" placeholder="검색하기" id="search">
+            <img src="image/돋보기.png" onclick="popup1()">
+        </div>
+        </div>
+        </ul>
+        </nav>
+        </div>
+    </header>
+
+    <section>
+
+        <div id="s_box2" style="margin-top:100px;">
+            <h2>진희's Pick</h2>
+            <div><a href="detail_kim.html"><img src="image/../image/드8/드1.jpg"></a></div>
+            <div><img src="image/../image/드8/드2.jpg"></div>
+            <div><img src="image/../image/드8/드3.jpg"></div>
+            <div><img src="image/../image/드8/드4.jpg"></div>
+            <div><img src="image/../image/드8/드5.jpg"></div>
+        </div>
+
+        <div id="s_box3">
+            <h2>지은's Pick</h2>
+            <div><img src="image/../image/드8/드6.jpg"></div>
+            <div><img src="image/../image/드8/드7.jpg"></div>
+            <div><img src="image/../image/드8/드8.jpg"></div>
+            <div><img src="image/../image/드8/드9.jpg"></div>
+            <div><img src="image/../image/드8/드10.jpg"></div>
+        </div>
+
+        <div id="s_box4">
+            <h2>동희's Pick</h2>
+            <div><img src="image/../image/드8/드11.jpg"></div>
+            <div><img src="image/../image/드8/드12.jpg"></div>
+            <div><img src="image/../image/드8/드13.jpg"></div>
+            <div><img src="image/../image/드8/드14.jpg"></div>
+            <div><img src="image/../image/드8/드15.jpg"></div>
+        </div>
+
+        <footer>
+            <div id="f_top">
+                <div id="f_top_wrap">
+                    <nav class="f_nav">
+                        <ul>
+                            <li>회사소개</li>
+                            <li>개인정보취급방침</li>
+                            <li>서비스약관</li>
+                            <li>제휴문의</li>
+                            <li>이메일수집거부</li>
+                        </ul>
+                    </nav>
+                    <!-- <div class="f_site">패밀리사이트</div> -->
+                </div>
+            </div>
+            <div id="f_bottom">
+                <div id="f_bottom_wrap">
+                    <h1><a href="home.html"><img src="image/공챠.png"></a></h1>
+                    <!-- <address>주소</address>
+                            <p>카피라이트</p> -->
+                </div>
+                <div id="member">
+                    <a><p>조원 :</p></a>
+                    <a href="공정배/introduce-1.html"><p>공정배</p></a>
+                    <a href="신동희/introduce.html"><p>신동희</p></a>
+                    <a href="박지은/self.html"><p>박지은</p></a>
+                    <a href="자기소개_진희.html"><p>김진희</p></a>
+                </div>
+            </div>
+        </footer>
+
+</body>
+<script>
+    var pos1 = document.getElementById("pos1");
+    var pos2 = document.getElementById("pos2");
+    var pos3 = document.getElementById("pos3");
+    var pos4 = document.getElementById("pos4");
+    var pos = [pos1, pos2, pos3, pos4];
+    var i = 0;
+    var a = 5;
+    var b = 0;
+    setInterval(function () {
+        if (i == 4) {
+            i = 0;
+        }
+        pos[i].checked = true;
+        i++;
+    }, 3000);
+    function stop1() {
+        stop = document.getElementById("stop");
+        start = document.getElementById("start");
+        stop.style.display = "none";
+        start.style.display = "inline-block";
+        b = i;
+        i = a;
+    };
+    function start1() {
+        stop = document.getElementById("stop");
+        start = document.getElementById("start");
+        stop.style.display = "inline-block";
+        start.style.display = "none";
+        i = b;
+    }
+    function detail() {
+        location.href = "detail.html";
+    }
+    function popup1() {
+        popup = document.getElementById("popup");
+        whole = document.getElementById("whole");
+        whole.style.display = "block";
+        popup.style.display = "block";
+    }
+    function exit1() {
+        popup = document.getElementById("popup");
+        whole = document.getElementById("whole");
+        whole.style.display = "none";
+        popup.style.display = "none";
+    }
+    function cover2() {
+        var j = 1;
+        var cover1 = document.getElementById("cover1");
+        cover1.style.opacity = j;
+        clearInterval(fade);
+        var fade = setInterval(function () {
+            j--;
+            cover1.style.opacity = j;
+            clearInterval(fade);
+        }, 2000)
+    }
+    function top1() {
+        location.href = "#top2";
+    }
+    function down1() {
+        location.href = "#member";
+    }
+</script>
+
+</html>
