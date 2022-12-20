@@ -1,0 +1,99 @@
+List (목록 태그) -> navbar 작성 시 활용
+  HTML 문서 내 리스트를 출력
+  종류
+   1. 순서 목록 - Ordered List -> <ol>
+        숫자, 알파벳 등으로 넘버링하여 출력
+        순서 표기 방식 변경 속성 : type
+          type="1" -> 1. 2. 3. 4. ...
+          type="A" -> A. B. C. D. ...
+          type="a" -> a. b. c. d. ...
+          type="I" -> I. II. III. IV. ...
+          type="i" -> i. ii. iii. iv. ...
+    https://www.w3schools.com/cssref/playit.asp?filename=playcss_ol_list-style-type&preval=armenian
+
+   2. 비순서 목록 - Unored List -> <ul>
+        도형을 사용하여 목록을 표현하는 방식
+        style 속성으로 표기 모양 변경
+        style="list-style-type: disc;" - ●
+        style="list-style-type: circle;" - ○
+        style="list-style-type: square;" - ■
+        style="list-style-type: none;" - 도형 제거
+
+
+목록의 항복을 표현하는 태그 - List Item -> <li>
+
+   3. 사용자(개발자) 정의 목록 (Difinition List)
+     <dl> - 정의 목록 태그
+     <dt> - 정의 용어 태그
+     <dd> - 정의 설명 태그
+
+Table(표 태그)
+  웹 문서에 표를 작성하는 태그. 데이터를 행과 열로 표현.(정렬)
+  <table> : 표 영역을 나타내는 태그.
+  <tr> : 행을 표현하는 태그.
+  <th> : 열을 표현하는 태그. 열의 제목을 표현하는 태그.
+  <td> : 열을 표현하는 태그. 데이터를 작성하는 태그.
+
+모든 행은 열의 개수가 같다. 모든 열의 가로 길이는 동일하다.
+
+표의 제목을 붙이는 태그 - < caption>
+  항상 표 위에 제목이 붙는다.(CSS로 변경 가능)
+
+  열/행 병합(분할 x) - 속성을 사용하여 병합을 처리
+    열 병합 : colspan - 병합할 열의 개수를 지정
+    행 병합 : lowspan - 병합할 행의 개수를 지정
+
+표, 열, 행의 너비와 높이 설정 : width, height 
+  행의 높이는 <tr> 태그에서 설정 - <tr height="50">
+  각 열의 너비는 <th> 또는 < td> 태그에서 설정 - <tn width="100"> 
+  전체적으로 같은 값으로 설정하는 경우 CSS에서 처리- 나중에..
+
+cologroup 태그 :  td(th)에 적용할 스타일을 미리 정의하여 적용
+        보조태그 : <col> 스타일이 적용될 열을 표현.
+            속성 : span - 다중의 열을 선택.
+
+테이블 시맨틱 태그(Semantic tag)
+  <thead> : 표의 제목부분
+  <tbody> : 표의 몸통(데이터) 부분
+  <tfoot> : 표의 바닥부분 
+
+이미지 태그 보충
+  자원의 위치 - html 파일과 이미지 파일이 같은 폴더에
+               저장되어 있지 않은 경우의 처리
+  경로의 처리 : 하위폴더의 자원(html, image 등)으로
+               접근 -> '폴더명/파일명'
+               상위 폴더로 접근 -> '../파일명'
+               같은 폴더 안의 파일을 활용할 때는 경로를 붙이지 않는다.
+
+메타 태그(meta tag) - <head> 요소에 포함되는 태그.
+  메타 데이터란? 웹 서버와 웹 브라우저 간에 상호 교환되는 정보를 정의하는데
+  사용하는 데이터.
+    문자집합 지정 - charset
+    그 밖에 문서의 작성자, 문서의 키워드, 문서의 설명 등을
+    담고 있는 요소.
+
+    반응형 웹을 만들 때 사용하는 Viewport를 지정.(미디어 쿼리)
+
+    관련 속성
+      name :  메타 정보의 이름
+      content : 이름에 해당하는 정보를 기술
+
+Character set - 문자집합.
+
+멀티미디어(오디오, 비디오, 유튜브)
+  저작권
+
+입력 양식 - <form>
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>
