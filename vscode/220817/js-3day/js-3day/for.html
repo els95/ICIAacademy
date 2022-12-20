@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>반복분 for 문</title>
+</head>
+<body>
+    <fieldset>
+        <legend>두 수 사이의 합 구하기</legend>
+        <label>첫번째 수 : <input type="text" id="fNum"></label><br>
+        <label>두번째 수 : <input type="text" id="sNum"></label>
+        <input type="button" value="구하기" onclick="twonumber()">
+        <h1 id="result"></h1>
+    </fieldset>
+</body>
+<script>
+    function twonumber(){
+        var fNum = Number(document.getElementById("fNum").value); // x타입에서 강제로 숫자로 바뀜
+        var sNum = Number(document.getElementById("sNum").value); // 입력할때는 value 입력
+        var result = document.getElementById("result"); // 출력할때는 value 생략
+
+        var txt = null;
+        var sum = 0;
+
+        for(var i=fNum; i<=sNum; i++){
+            //sum = sum + i;
+            sum = sum + i;
+        
+            txt = txt + i;
+
+            if(i<sNum){
+                txt += " + ";
+            } else {            // i==sum 조건
+                txt += " = ";
+            }
+        }
+        result.innerHTML = txt + sum;
+        // txt += sum;
+            // result.innerHRML = txt;
+        // document.getElementById("result").innerHTML = txt+ sum;
+    }
+
+  
+
+
+    // 오늘은 반복문을 배웁니다 -> console.log() 사용하여 10번 출력!
+    //for(var i=1; i<=10; i++){
+
+        //console.log(i + ". 오늘은 반복문을 배웁니다.");
+
+    // }
+
+    // 덧셈을 위한 변수 sum 선언
+  /*  var sum = 0;
+
+    // for문을 사용해서 1부터 10까지의 합을 sum에 넣어보시오
+    for(var i=1; i<=10; i++){
+        //console.log("sum : " + sum);
+        //console.log("i : "+ i);
+        sum = sum + i;  //기존에 있던 sum 값에 i값을 더한 것을 다시 sum에 대입  
+        
+        //1+2+3+4+5+6+7+8+9+10 = 55
+        document.write(i);
+        if(i<10){
+            document.write("+");
+        }else {
+            document.write("=");
+        }   
+    }
+    document.write(sum);
+    console.log("sum : " + sum);*/
+   
+</script>
+</html>

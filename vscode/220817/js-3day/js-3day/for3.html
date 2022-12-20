@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>별찍기 예제</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /* 중첩for문 사용
+       출력결과
+       *
+       **
+       ***
+       ****
+
+       위와 같이 나오도록 작성하시오
+    */
+    
+   for(var i=1; i<=4; i++){  //i : 줄(행) , j:별(* 갯수)
+        for(var j=1; j<=i; j++){
+           document.write("*");
+        } 
+        document.write("<br>");   
+   }
+
+
+   for(var i=1; i<=4; i++){  //i : 줄(행) , j:별(* 갯수)
+        for(var j=1; j<=5-i; j++){
+           document.write("*");
+        } 
+        document.write("<br>");   
+   }
+
+   for(var i=1; i<=7; i++){
+        for(var j=1; j<=i; j++){
+            if(i%2==0){
+            continue; 
+        }
+            document.write("*");
+        }
+        document.write("<br>");  
+   }
+   
+</script>
+</html>

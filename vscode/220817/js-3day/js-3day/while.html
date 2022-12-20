@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>반복문 while문</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+    while(조건){
+
+        실행문;
+        
+    }
+    
+    */
+
+   /* var i = 1;
+   while(i<=3){
+        console.log("안녕하세요.");
+        i++;
+   }*/
+
+
+   //while문 예제
+   var run = true;      // 실행이라는 의미를 지닌 변수 run에 true값을 대입
+   var cnt = 0;         // 카운트를 세는 변수 cnt선언(0을 대입하는 이유 : number 타입)
+   var dice = 0;         // 주사위 숫자를 표현하기 위한 변수 dice 선언
+
+   while(run){
+        dice = parseInt((Math.random() * 6) + 1); // 1부터 6사이의 랜덤한 숫자를 저장한다.
+        cnt++;                          // 주사위를 한번 굴릴때 마다 카운트 1씩 증가
+        if(dice==3){                    // 굴릴 주사위의 값이 5가 되면 멈추도록
+            run = false;
+        }
+
+        console.log("주사위의 값 : " + dice);
+   }
+   console.log("던진횟수 : " + cnt)
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>제n사분면</legend>
+        <label>x축 <input type="text" id="x"></label><br>
+        <label>y축 <input type="text" id="y"></label>
+        <input type="button" value="구하기" onclick="run()">
+        <h3 id="sms"></h3>
+
+    </fieldset>
+</body>
+<script>
+    function run(){
+        var x = document.getElementById("x").value;
+        var y = document.getElementById("y").value;
+        var sms = document.getElementById(sms);
+
+        if(x==12&&y==5){
+            document.getElementById("sms").innerHTML = x + "," + y + "는 제 1사분면입니다.";
+        } else if(x==-12&&y==5){
+            document.getElementById("sms").innerHTML = x + "," + y + "는 제 2사분면입니다.";
+        } else if(x==-12&&y==-5){
+            document.getElementById("sms").innerHTML = x + "," + y + "는 제 3사분면입니다.";
+        } else if(x==-2&&y==-5){
+            document.getElementById("sms").innerHTML = x + "," + y + "는 제 4사분면입니다.";
+        } else{
+            document.getElementById("sms").innerHTML = ("잘 못 입력하였습니다.");
+        }
+    
+    }
+
+
+</script>
+</html>

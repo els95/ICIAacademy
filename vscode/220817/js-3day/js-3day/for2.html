@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>중첩for문</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*for(초기식; 조건식; 증감식){          <--------- 외부for문
+
+    for(초기식; 조건식; 증감식){            <-------- 내부for문  
+
+     실행문;
+
+    } 
+} */
+
+    for(var i=1; i<=3; i++){
+
+        for(var j=1; j<=2; j++){
+            console.log("i : " + i + " /  j : " + j);
+        }
+
+    }
+
+    // 중첩 for문을 사용하여 구구단 2단부터 9단까지 출력
+
+    for(var a=2; a<=9; a++){
+        document.write("==="+a+"단===<br>");
+
+        for(var b=1; b<=9; b++){
+            document.write(a + " x " + b + " = " + (a*b)+"<br>");
+        }  
+        document.write("<br>");
+    }
+
+    
+</script>
+</html>

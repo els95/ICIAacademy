@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>두 두 사이의 합 구하기 </legend>
+            <label>첫번째 수 <input type="text" id="fNum"></label><br>
+            <label>첫번째 수 <input type="text" id="sNum"></label>
+            <input type="button" value="구하기" onclick="Num()">
+            <h1 id="result"></h1>
+    </fieldset>
+
+</body>
+<script>
+    function Num(){
+        var fNum = Number(document.getElementById("fNum").value);
+        var sNum = Number(document.getElementById("sNum").value);
+        var result = document.getElementById("result");
+
+        var sum =0;
+        var text = null;
+
+        /*for(var i=fNum; i<=sNum; i++){
+            sum = sum + i;}
+           // text = text + i;
+
+           /* if(i<sNum){
+               text = text + " + ";
+            } else{
+                text = text + " = ";
+            }*/
+
+            if(fNum<=sNum){
+                for(var i=fNum; i<=sNum; i++){
+                 sum = sum + i;
+            } else {
+                for(var i=sNum; i<=fNum; i++){
+                 sum = sum + i;}
+            
+            }
+            }
+        }   
+        result.innerHTML= text + sum;
+
+    
+
+    
+</script>
+</html>
