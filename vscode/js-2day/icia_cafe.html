@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICIA cafe</title>
+    <style>
+        tr {
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>ICIA cafe에 오신것을 환영합니다.</legend>
+        <h3>주문을 도와드리겠습니다.</h3>
+
+        <table>
+            <tr>
+            <!-- 이미지에 onclick 실행하기 -->
+                <td><img src="아메리카노.jpg" onclick="menu('아메리카노')" width="100px"><br></td>
+                <td><img src="카페라떼.jpeg" onclick="menu('카페라떼')" width="100px"><br></td>
+                <td><img src="자허블.png" onclick="menu('자몽허니블랙티')" width="65px"><br> </td>
+                <td><img src="마끼아또.jpg" onclick="menu('카라멜마끼아또')" width="100px"><br></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="아메리카노"onclick="menu('아메리카노')"></td>
+                <td><input type="button" value="카페라떼"onclick="menu('카페라떼')"></td>
+                <td><input type="button" value="자몽허니블랙티" onclick="menu('자몽허니블랙티')"></td>
+                <td><input type="button" value="카라멜마끼아또" onclick="menu('카라멜마끼아또')"></td>
+            </tr>
+            
+        </table>
+    </fieldset>
+</body>
+<script>
+    function menu(mychoice){
+
+        var price;
+
+        switch(mychoice){
+            case "아메리카노" : 
+                price = 2000;
+                break;
+            case "카페라떼" : 
+                price = 2500;
+                break;
+            case "자몽허니블랙티" : 
+                price = 3000;
+                break;
+            case "카라멜마끼아또" : 
+                price = 3500;
+                break;
+            default : 
+                price = 0;
+                break;
+        }
+        
+        var order = confirm('주문하신 메뉴는 ' + mychoice + 
+        "\n가격은 " + price +"원 입니다.\n주문하시겠습니까?");
+
+        if(order){
+            alert('주문을 성공했습니다.');
+        } else {
+            alert('주문을 취소했습니다.');
+        }   
+}
+</script>
+</html>
