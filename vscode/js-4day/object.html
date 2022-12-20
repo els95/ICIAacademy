@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<!-- head -->
+<head>
+   <meta charset='UTF-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <meta name='author' content='din'>
+   <meta name='date' content='2022.'>
+   <link rel='shortcut icon' href="../icon/favicon (4).ico">
+   <title>객체(Object)</title>
+</head>
+    
+<!-- body -->
+<body>
+
+    <h3 id="car1"></h3>
+    <h3 id="person1"></h3>
+
+
+</body>
+
+<!-- script -->
+<script>
+    // 객체(Object) :다른것과 식별이 가능한 것
+    // 자신만의 고유한 특성과 행동을 지니며 다른 객체들과 상호작용을 한다.
+
+    // 객체를 만드는 방법, object를 선언하는 방법
+    // (1) var object1 = {};
+    // (2) var object2 = new object();
+
+    // 자동차(car) 객체(object) 만들기!
+    var car = {
+        name : "Mosel S",
+        company : "Tesla",
+        color : "black",
+        type : "electric",
+    };
+
+    car.number = 4567;
+    // key : value 1쌍
+
+    console.log(car);
+
+
+    // 너 차 이름이 뭐야?
+    var car1 = document.getElementById("car1");
+    // car1 = <h3 id="car1"></h3>
+    car1.innerHTML = car.name;
+    // <h3 id="car1">Model S</h3>
+
+    // myCar 객체!
+    var myCar = {
+        name : "Jeep Renegade",
+        company : "Jeep",
+        color : "Graphite Grey",
+        type : "Gasoline",
+        price : "4,190~4,840만원",
+    };
+    console.log(myCar);
+
+
+    // 사람 객체 생성
+    var person = new Object();
+
+    person["name"] = "황인철";
+    person["age"] = 40;
+    person["phone"] = "010-1234-5678";
+
+    console.log(person);
+    
+    var text="";
+    for(var i in person){
+        console.log("key : "+ i);
+        console.log("value : " + person[i]);
+        text += i + " : " + person[i] + "<br>";
+
+    }
+    var person1 = document.getElementById("person1");
+    person1.innerHTML = text; // br 태그가 html로 적용됨
+    // person1.innerText = text;=  모든 문자 그대로 출력됨
+</script>
+</html>
