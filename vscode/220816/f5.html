@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+    
+    <head>
+        
+        <meta charset="UTF-8">
+            <title>프리샘 레이아웃짜기</title>
+            <!-- 여기에 CSS 링크-->
+            <style>
+                section {
+                    width: 960px;
+                    margin: auto;
+                }
+                header {
+                    height: 105px;
+                  
+                }
+                section {
+                    height: 1220px;
+                    padding: 30px;
+                }
+                footer {
+                    height: 205px;
+                }
+                
+                .t_nav {
+                    display: inline;
+                    float: right;
+                    position: absolute;
+                    right: 20px;
+                    top: -10px;
+                    box-sizing: border-box;
+                }
+                .t_nav>ul>li {
+                    display: inline;
+                    margin: 10px;
+                    
+                }
+                #h_bottom > .m_nav > ul > li {
+                    margin: 30px;
+                    list-style-type: none;
+                    display: inline-block;
+                }
+                #h_bottom {
+                    text-align: center;
+                    width: 960px;
+                    margin :auto;
+                }
+                #h_bottom > h1 {
+                    float: left;
+                    padding-left: 30px;
+                    display: inline;
+
+                }
+                #h_top{
+                    height: 30px;
+                    background-color: darkseagreen;
+                    position: relative;
+                    width: 100%;
+                    
+                }
+                .h_left {
+                    background-color: teal;
+                    color: white;
+                    width: 150px;
+                    height: 30px;
+                    margin-left: 30px;
+
+                }
+               
+                #s_box1 {
+                    height: 355px;
+                    margin-bottom: 10px; 
+                    box-sizing: border-box;
+                    
+                }
+                #box1 {
+                    width: 650px;
+                    background-color: pink;
+                    float: left;
+                    height: 100%;       
+                    margin-bottom: 10px; 
+                    box-sizing: border-box;
+                }
+                #box2 {
+                    width: 310px;
+                    background-color: antiquewhite;
+                    float: right;
+                    height: 100%;
+                    margin-bottom: 10px;
+                    box-sizing: border-box; 
+                }
+
+                #s_box2 {
+                    height: 160px;
+                    margin-bottom: 10px;
+                }
+                #box3 {
+                    width: 310px;
+                    background-color: pink;
+                    float: left;
+                    margin-right: 15px;
+                    height: 100%;
+                    margin-bottom: 10px; 
+                    
+                }
+                #box4 {
+                    width: 310px;
+                    background-color: pink;
+                    margin-right: 15px;
+                    float: left;
+                    height: 100%;
+                    margin-bottom: 10px; 
+                }
+                #box5 {
+                    width: 310px;
+                    background-color: pink;
+                    float: right;
+                    height: 100%;
+                    margin-bottom: 10px; 
+                }
+                #s_box3 {
+                    width: 960px;
+                    border: 1px solid silver;
+                    float: left;
+                    height: 125px;
+                    margin-bottom: 10px;
+                    background-color: whitesmoke;
+                }
+                #s_box4 {
+                    width: 960px;
+                    border: 1px solid silver;
+                    height: 65px;
+                    float: left;
+                    margin-bottom: 10px;
+                    background-color: darkseagreen;
+                }
+                #s_box5 {
+                    height: 240px;
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                #sc {
+                    width: 475px;
+                    margin-right: 10px;
+                    border: 1px solid silver;
+                    background-color: thistle;
+                    height: 100%;
+                    float: left;
+                    box-sizing: border-box;
+                    margin-bottom: 10px;
+                }
+                #kid {
+                    width: 475px;
+                    border: 1px solid silver;
+                    background-color: thistle;
+                    height: 100%;
+                    float: right;
+                    box-sizing: border-box;
+                    margin-bottom: 10px;
+                }
+                #s_box6{
+                    height: 155px;
+                }
+                #box6_1{
+                    float: left;
+                    height: 100%;
+                    width: 232.5px;
+                    margin-right: 10px;
+                    background-color: seashell;
+                    box-sizing: border-box;
+                    border: 1px solid silver;
+                    margin-bottom: 10px;
+                }
+                #box6_2{
+                    float: left;
+                    height: 100%;
+                    width: 232.5px;
+                    margin-right: 10px;
+                    background-color: seashell;
+                    box-sizing: border-box;
+                    border: 1px solid silver;
+                    margin-bottom: 10px;
+                }
+                #box6_3{
+                    float: left;
+                    height: 100%;
+                    width: 232.5px;
+                    margin-right: 10px;
+                    background-color: seashell;
+                    box-sizing: border-box;
+                    border: 1px solid silver;
+                    margin-bottom: 10px;
+                }
+                #box6_4 > ul{
+                    list-style-type: none;
+                }
+                #a{
+                    width: 232.5px;
+                    height: 72.5px;
+                    float: right;
+                    border: 1px solid silver;
+                    box-sizing: border-box;
+                    margin-bottom: 10px;
+                    background-color: peachpuff;
+                }
+                #b{
+                    width: 232.5px;
+                    height: 72.5px;
+                    float: right;
+                    border: 1px solid silver;
+                    box-sizing: border-box;
+                    margin-bottom: 60px;
+                    background-color: peachpuff;
+                }
+                #f_top {
+                    background-color: lightgrey;
+                    float: left;
+                    width: 100%;
+                    height: 60px;
+                }
+                 
+                .f_nav > ul {
+                    list-style-type: none; 
+                    line-height: 10px;
+                }
+                .f_nav > ul >li {
+                    float: left;
+                    margin: 10px;
+                }
+                .f_site {
+                    float: right;
+                    margin-right: 60px;
+                }
+                #f_bottom {
+                    background-color: grey;
+                    padding-top: 30px;
+                    height: 145px;
+                    float: left;
+                    width: 100%;
+                }
+                #f_bottom_wrap > h1 {
+                    margin-right: 80px;
+                    float: left;
+                    margin-left: 50px;
+                }
+                head, body {
+                    margin: 0;
+                }
+
+            </style>
+        </head>
+        <body>
+            <header>
+                <div id="h_top">
+                    <div id="h_top_wrap">
+                        <div class="h_left">교원 EDU 바로가기></div>
+                        <nav class="t_nav">
+                            <ul>
+                                <li>로그인</li>
+                                <li>고객센터</li>
+                                <li>전체메뉴</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div id="h_bottom">
+                    <h1 >로고</h1>
+                    <nav class="m_nav" >
+                        <ul>
+                            <li>온라인학습방</li>
+                            <li>매거진+</li>
+                            <li>놀이터</li>
+                            <li>이벤트</li>
+                            <li>마이페이지</li>
+                            <li>학부모방</li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            
+            <section>
+                <div id="s_box1">
+                    <div id = box1>이미지슬라이더</div>
+                    <div id = box2>로그인박스</div>
+                </div>
+                <div id="s_box2">
+                    <div id = box3>오늘의퀴즈쇼</div>
+                    <div id = box4>프리장터</div>
+                    <div id = box5>이벤트</div>
+                </div>
+                <div id="s_box3">주요서비스바로가기</div>
+                <div id="s_box4">공지사항</div>
+                <div id="s_box5">
+                    <div id ="sc">과학소년</div>
+                    <div id = "kid">위즈키즈</div>
+                </div>
+                <div id="s_box6">
+                    <div id="box6_1">이용안내</div>
+                    <div id="box6_2">고객센터</div>
+                    <div id="box6_3">올스토리펜자료실</div>
+                    <div id="box6_4">
+                        <ul>
+                            <li id="a">교원진단서비스</li>
+                            <li id="b">본인인증</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <footer>
+                <div id="f_top">
+                    <div id="f_top_wrap">
+                        <nav class="f_nav">
+                            <ul>
+                                
+                                <li>회사소개</li>
+                                <li>개인정보취급방침</li>
+                                <li>서비스약관</li>
+                                <li>제휴문의</li>
+                                <li>이메일수집거부</li>
+                            </ul>
+                        </nav>
+                        <div class="f_site">패밀리사이트</div>
+                    </div>
+                </div>
+                <div id="f_bottom">
+                    <div id="f_bottom_wrap">
+                        <h1>로고</h1>
+                        <address>주소</address>
+                        <p>카피라이트</p>
+                    </div>
+                </div>
+            </footer>
+        </body>
+    </html>
