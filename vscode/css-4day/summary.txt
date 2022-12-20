@@ -1,0 +1,45 @@
+z-index
+    중첩된 요소의 쌓이는 순서를 지정.
+    작은 번호가 바닥으로, 큰 번호가 위로 올라온다.
+
+
+opacity
+    투명도 지정 속성. 0.0(완전 투명) ~ 1.0(완전 불투명)
+
+
+overflow
+    영역 요소에 비하여 내부 컨텐츠 요소의 너비, 높이 길이가 큰 경우
+    속성값
+    1) visible : 기본값, 그대로 둔다. (아무 조치 안함)
+
+    2) hidden : 넘친 컨텐츠를 숨김(제거)
+
+    3) scroll : 넘친 컨텐츠를 숨기고 스크롤바를 붙임
+
+    4) auto : 안넘치면 그대로, 넘치면 스크롤바를 붙임
+
+    컨텐츠가 텍스트일 경우 auto, 이미지일 경우 hidden
+
+
+float : 요소의 위치를 지정하는 방법
+    folot의 뜻 - 부동(떠다님)
+    속성값 - left, right.
+
+    clear : 요소의 float 속성을 지우는 속성
+            float를 left로 설정했으면 clear도 left로 설정
+            both : 방향을 고려하지 않고 둘 다 지우는 속성값
+
+    * clearfix 방식 - 요소의 앞(before) 또는 뒤(after)에 float를 제거하는 가상의 박스를
+                     추가하는 방식
+                     float의 오류를 제어하는 데 많이 사용되는 방식임
+
+        float 사용은 주의가 필요함. 문서를 여러 영억으로 분할하고 각 영역별로 float을
+        사용하는 방식을 추천(clearfix도 활용)
+
+
+
+display(and visible)
+
+transform(모양 변환)
+
+transition(변환 시 효과주기 -속도)

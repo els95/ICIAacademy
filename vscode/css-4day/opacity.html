@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>요소의 투명도 처리</title>
+    <style>
+        img {
+            width: 300px;
+        }
+        #s1 {
+            opacity: 0.2;
+        }
+        #s2 {
+            opacity: 0.5;
+        }
+        #s3 {
+            opacity: 1.0;
+        }
+        #s4 {
+            opacity: 0.5;
+        }
+        #d1 {
+            padding: 20px;
+            box-shadow: 5px 5px 10px #000;
+            margin: 20px;
+            width: 320px;
+        }
+        #d1:hover #s4 {
+            opacity: 1.0;
+        }
+    </style>
+</head>
+<body>
+    <h2>이미지  투명도</h2>
+    <img src="ㅁ.jpg" id="s1">
+    <img src="ㅁ.jpg" id="s2">
+    <img src="ㅁ.jpg" id="s3">
+    <hr>
+    <div id="d1">
+        <h3>이미지에 마우스를 올려보세요</h3>
+        <a href="https://search.naver.com/search.naver?where=image&sm=tab_jum&query=%EB%B0%A4%ED%95%98%EB%8A%98"
+        target="_blank"><img src="ㅁ.jpg" id="s4"></a>
+    </div>
+
+</body>
+</html>
