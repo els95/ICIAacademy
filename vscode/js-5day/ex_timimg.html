@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<!-- head -->
+<head>
+   <meta charset='UTF-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <meta name='author' content='din'>
+   <meta name='date' content='2022.'>
+   <link rel='shortcut icon' href='../icon/favicon (4).ico'>
+   <title></title>
+</head>
+    
+<!-- body -->
+<body>
+    <h1 id="result"></h1>
+</body>
+
+<!-- script -->
+<script>
+    var interval = document.getElementById("interval");
+    var setTime = document.getElementById("setTime");
+    var result = document.getElementById("result");
+
+    var mytime = 0;
+    var x = 5;
+   
+
+
+        // 시작버튼을 여러번 누를 경우 발생하는 오류 방지
+        clearInterval(mytime);
+        mytime = setInterval(function(){
+            if(x==0){
+            clearInterval(mytime);
+            } else{
+                
+                x--;
+                result.innerHTML = x + "초 후에 다음 홈페이지로 이동합니다.";
+            }
+        
+        }, 1000);
+        
+        setTimeout(function(){
+        mytime = setInterval(function(){
+            x= 0;
+        });
+            alert("페이지가 이동됩니다.");
+            location.href="http://www.daum.net"; 
+        },5000);
+</script>
+</html>

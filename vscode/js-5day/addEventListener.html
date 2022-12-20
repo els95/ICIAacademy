@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<!-- head -->
+<head>
+   <meta charset='UTF-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <meta name='author' content='din'>
+   <meta name='date' content='2022.8.19'>
+   <link rel='shortcut icon' href='../icon/favicon (4).ico'>
+   <title>addEventListener</title>
+   <style>
+    div {
+        width: 250px;
+        height: 250px;
+        line-height: 250px;
+        background-color: black;
+        text-align: center;
+    }
+   </style>
+</head>
+
+<!-- body -->
+<body>
+    <h3 id="msg">FOCUS NULL</h3>
+    <input type="text"  id="textInput" onfocus="">
+    <br>
+
+    <div id="box"></div>
+   
+</body>
+
+<!-- script -->
+<script>
+    /*
+        addEventListener : event를 깔끔하게 작업하기 위해 사용
+
+        사용법 : document.addEventListener(event, function)
+        event - 사용할 이벤트, function - 함수이름
+    */
+
+   var textInput = document.getElementById("textInput"); 
+    //value 안쓰는 이유 -> 값이 아니라 태그 전체를 보기 위하여
+    textInput.addEventListener("focusin", fcsin);
+    textInput.addEventListener("focusout", fcsout);
+
+    var msg = document.getElementById("msg");
+
+    function fcsin(){
+        msg.innerHTML = "FOCUS IN!";
+        textInput.style.backgroundColor = "antiquewhite";
+    }
+
+    function fcsout(){
+        msg.innerHTML = "FOCUS OUT!";
+        textInput.style.backgroundColor = "salmon";
+    }
+    var box = document.getElementById("box");
+   
+     // 1) 클릭했을때 발생하는 이벤트
+     // 2) 더블(dbl)클릭 했을때 발생하는 이벤트
+     // 3) 마우스가 영역 안으로 들어왔을때 발생하는 이벤트
+     // 4) 마우스가 영역 밖으로 나갔을때 발생하는 이벤트
+     box.addEventListener("click",click);
+    box.addEventListener("dblclick",dblclick);
+    box.addEventListener("mouseenter",mouseenter);
+    box.addEventListener("mouseout",mouseout);
+
+    function click(){
+        box.innerHTML = "click!!";
+        box.style.backgroundColor = "orange";
+    }
+
+    function dblclick(){
+        box.innerHTML = "dblclick!!";
+        box.style.backgroundColor = "blue";
+    }
+
+    function mouseenter(){
+        box.innerHTML = "mouseenter!!";
+        box.style.backgroundColor = "red";
+    }
+
+    function mouseout(){
+        box.innerHTML = "mouseout!!";
+        box.style.backgroundColor = "pink";
+    }
+
+
+</script>
+</html>
