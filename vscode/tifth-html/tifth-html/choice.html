@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+     <title>단일 선택과 다중 선택</title>
+</head>
+<body>
+    <h2>단일 선택</h2>
+    <form>
+        <h3>당신의 성별은?</h3>
+        <label for="man">남성</label>
+        <input id="man" type="radio" name="gender" value="M" ><br>
+        <label for="woman">여성</label>
+        <input id="woman" type="radio" name="gender" value="F"><br>
+        <input type="submit" value="전송">
+    </form>
+    <hr>
+    <form>
+        <fieldset>
+            <legend>지금 먹고 싶은 음식은?</legend>
+            <label for="gam">감바스</label>
+            <input id="gam" type="radio" name="food" valur="gam"><br>
+            <label for="jin">진매</label>
+            <input id="jin" type="radio" name="food" valur="jin"><br>
+            <label for="don">돈까스</label>
+            <input id="don" type="radio" name="food" valur="don"><br>
+            <label for="jam">잠</label>
+            <input id="jam" type="radio" name="food" valur="jam"><br>
+        </fieldset>
+    </form>
+    <hr>
+    <h2>다중 선택</h2>
+    <form>
+        <fieldset>
+            <legend>히주가 좋아하는 반려동물은?</legend>
+            <input type="checkbox" name="pet" value="dog">강아지<br>
+            <input type="checkbox" name="pet" value="cat">고양이<br>
+            <input type="checkbox" name="pet" value="gol">고릴라<br>
+            <input type="checkbox" name="pet" value="sha">상어<br>
+            <input type="submit" value="전송">
+        </fieldset>
+
+    </form>
+</body>
+</html>
