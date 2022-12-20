@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>요소의 위치</title>
+    <style>
+        div {
+            border: 2px solid green;
+            width: 300px;
+        }
+        .static {
+            position: static;
+            left: 100px;
+        }
+        .rel {
+            position: relative;
+            left: 50px;
+            top: 20px;
+        }
+        .fix {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+        }
+        .abs {
+            position : absolute;
+            right: 10px;
+            top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>static 위치</h2>
+    <div class="static">이요소의 위치는 static입니다.</div>
+    <h2>relative 위치</h2>
+    <div class="rel">이요소의 위치는 relative입니다.</div>
+    <h2>fixed 위치</h2>
+    <div class="fix">이요소의 위치는 fixed입니다.</div>
+    <h2>absolute 위치</h2>
+    <div class="abs">이요소의 위치는 absolute입니다.</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가상 요소 선택자</title>
+    <style>
+        p::first-line {
+            color: green;
+            background-color: blanchedalmond;
+        }
+        h2::first-letter, p::first-letter {
+            color: brown;
+            font-size: 50px;
+        }
+        #p1::after {
+            content: "복숭아 이미지";
+            color: purple;
+            background-image: url(복숭아.jpg);
+            background-size: 300px 200px;
+            width: 300px;
+            height: 200px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h2>이건 제목입니다.</h2>
+    <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed suscipit justo sed tortor ullamcorper,
+         nec porta diam convallis. </p>
+    <p>이건 다른 문단입니다.</p>
+</body>
+</html>
